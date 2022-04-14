@@ -17,38 +17,38 @@
 
     <body>
         <header>
-            <!-- top navbar -->
-            <nav class="nav-extended text-shadow">
+            <!-- main navbar -->
+            <nav class="nav-extended text-shadow green darken-4">
                 <div class="nav-wrapper">
-                    <a href="{{ url_for('get_offers') }}" class="brand-logo">Sharing is Caring</a>
+                    <a href="#!" class="brand-logo">Sharing-is-Caring</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('get_offers') }}">Home</a></li>
-                        <li><a href="#">Offers</a></li>
+                        <li><a href="#">Home</a></li>
                         <li><a href="#">Rules</a></li>
+                        <li><a href="#">Offers</a></li>
                         <li><a href="#">Manage Categories</a></li>
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Log In</a></li>
+                        <li><a href="#">Log Out</a></li>
                         <li><a href="#">Register</a></li>
-                        <li><a href="#">Log out</a></li>
                         <li><a href="#">Contact Admin</a></li>
                     </ul>
                 </div>
             </nav>
 
             <!-- mobile sidenav -->
-                    <ul class="sidenav" id="mobile-demo">
-                <li><h4 class="center-align">Sharing is Caring</h4></li>
-                <li><a href="{{ url_for('get_offers') }}">Home</a></li>
-                <li><a href="#">Offers</a></li>
+            <ul class="sidenav" id="mobile-demo">
+                <li><h4 class="center-align green-text text-darken 4">Sharing-is-Caring</h4></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Rules</a></li>
+                <li><a href="#">Offers</a></li>
                 <li><a href="#">Manage Categories</a></li>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Log In</a></li>
+                <li><a href="#">Log Out</a></li>
                 <li><a href="#">Register</a></li>
-                <li><a href="#">Log out</a></li>
                 <li><a href="#">Contact Admin</a></li>
-                    </ul>
+            </ul>
         </header>
 
         {% block content %}
