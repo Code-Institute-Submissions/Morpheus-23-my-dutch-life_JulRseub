@@ -26,14 +26,13 @@
 
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('get_offers') }}">Home</a></li>
-                        <li><a href="#">Rules</a></li>
                         <li><a href="#">Offers</a></li>
                         <li><a href="#">Manage Categories</a></li>
-                        <li><a href="#">Profile</a></li>
+                        <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
-                        <li><a href="#">Log Out</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
                         <li><a href="#">Contact Admin</a></li>
+                        <li><a href="#">Log Out</a></li>
                     </ul>
                 </div>
             </nav>
@@ -42,14 +41,13 @@
             <ul class="sidenav" id="mobile-demo">
                 <li><h4 class="center-align green-text text-darken 4">Sharing-is-Caring</h4></li>
                 <li><a href="{{ url_for('get_offers') }}">Home</a></li>
-                <li><a href="#">Rules</a></li>
                 <li><a href="#">Offers</a></li>
                 <li><a href="#">Manage Categories</a></li>
-                <li><a href="#">Profile</a></li>
+                <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="#">Log Out</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
                 <li><a href="#">Contact Admin</a></li>
+                <li><a href="#">Log Out</a></li>
             </ul>
         </header>
 
