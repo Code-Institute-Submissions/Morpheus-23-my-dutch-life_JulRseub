@@ -1,6 +1,94 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="black-text center-align">Add Offer</h3>
+<h3 class="black-text center-align">Add Offer</h3>
+
+<div class="row">
+    <form class="col s12" method="POST" action="">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-hand-holding-heart prefix black-text"></i>
+                <input id="offer_name" name="offer_name" minlength="4" maxlength="50" type="text" class="validate"
+                    required>
+                <label for="offer_name">Offer Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-pen prefix black-text"></i>
+                <textarea id="offer_description" name="offer_description" minlength="10" maxlength="200"
+                    class="materialize-textarea"></textarea> <label for="textarea1"></label>
+                <label for="offer_description">Offer Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-map-location prefix black-text"></i>
+                <textarea id="offer_collection_point" name="offer_collection_point" minlength="10" maxlength="200"
+                    class="materialize-textarea"></textarea> <label for="textarea1"></label>
+                <label for="offer_collection_point">Offer collection address</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-calendar-check prefix black-text"></i>
+                <input id="offer_collection_date" name="offer_collection_date" type="text" class="datepicker validate"
+                    required>
+                <label for="offer_collection_date">Offer Collection Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-clock prefix black-text"></i>
+                <input id="offer_collection_time" name="offer_collection_time" type="text" class="timepicker validate"
+                    required>
+                <label for="offer_collection_time">Offer Collection Time</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-calendar-xmark prefix black-text"></i>
+                <input id="offer_expiry_date" name="offer_expiry_date" type="text" class="datepicker validate" required>
+                <label for="offer_expiry_date">Offer Expiry Date</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fa-solid fa-hourglass-end prefix black-text"></i>
+                <input id="offer_expiry_time" name="offer_expiry_time" type="text" class="timepicker validate" required>
+                <label for="offer_expiry_time">Offer Expiry Time</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fa-solid fa-fire prefix black-text"></i>
+                    <label for="is_hot_product">
+                        <input type="checkbox" id="is_hot_product" name="is_hot_product">
+                        <span class="lever"></span>
+                        Caution: Hot Product !
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <div class="switch">
+                    <i class="fa-solid fa-snowflake prefix black-text"></i>
+                    <label for="is_frozen_product">
+                        <input type="checkbox" id="is_frozen_product" name="is_frozen_product">
+                        <span class="lever"></span>
+                        Note: Frozen Product !
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</div>
 
 {% endblock %}
