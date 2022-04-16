@@ -104,6 +104,23 @@ def logout():
 
 @app.route("/add_offer")
 def add_offer():
+    if request.method == "POST":
+        # get date timevalues from UI to format
+        collection_date_start = request.form.get("offer_collection_date")
+        collection_time_start = request.form.get("offer_collection_start_time")
+        collection_time_end = request.form.get("offer_collection_expiry_time")
+        
+        offer = {
+            "category_name": request.form.get("category_name"),
+            "name": request.form.get("offer_name"),
+            "description": request.form.get("offer_description"),
+#formatted dates go here
+            "member_username": session["username"]
+        }
+        mongo.db.offers.insert_one(offer)
+        flash("Task Successfully Added")
+        return redirect(url_for("get_tasks"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_offer.html", categories=categories)
 
