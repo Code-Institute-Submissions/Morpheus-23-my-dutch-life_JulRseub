@@ -19,7 +19,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_offers")
 def get_offers():
-    offers = mongo.db.offers.find()
+    offers = list(mongo.db.offers.find())
     return render_template("offers.html", offers=offers)
 
 @app.route("/register", methods=["GET", "POST"])

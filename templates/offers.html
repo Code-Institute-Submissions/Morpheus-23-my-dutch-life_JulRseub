@@ -1,27 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for offer in offers %}
-        {{ offer.offer_name }}<br>
-        {{ offer.category_name }}<br>
-        {{ offer.offer_description }}<br>
-        {{ offer.is_urgent }}<br>
-        {{ offer.collection_date }}<br>
-    {% endfor %}
 
-    <ul class="collapsible">
-        <li>
-            <div class="collapsible-header black-text darken-4"><i class="fa-solid fa-angle-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header black-text darken-4"><i class="fa-solid fa-angle-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header black-text darken-4"><i class="fa-solid fa-angle-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-    </ul>
+<ul class="collapsible">
+    {% for offer in offers %}
+    <li>
+        <div class="collapsible-header black-text light-green darken-4 text-shadow">
+            <i class="fa-solid fa-angle-down"></i>
+            <strong>{{ offer.offer_name }}</strong> : {{ offer.collection_date }}
+            {% if offer.is_hot_product == "on" %}
+            <i class="fa-solid fa-fire black-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Hot Product!"></i>
+            {% endif %}
+            {% if offer.is_frozen_product == "on" %}
+            <i class="fa-solid fa-snowflake black-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Frozen Product!"></i>
+            {% endif %}
+        </div>
+        <div class="collapsible-body">
+            <strong>{{ offer.category_name }}</strong>
+            <p>
+                {{ offer.offer_description }}
+            </p>>
+            <p>
+                {{ offer.offer_collection_point }}
+            </p>>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
 
 {% endblock %}
