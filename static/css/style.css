@@ -18,6 +18,16 @@
 .collapsible-body {
     background-color: antiquewhite;
 }
+
+.btn-small {
+    margin: 5px;
+}
+
+.collapsible-header .col strong {
+    margin: 5px;
+    line-height: 42px;
+}
+
 /*
 body {
     background-color: rgba(114,40,37,0.5);
