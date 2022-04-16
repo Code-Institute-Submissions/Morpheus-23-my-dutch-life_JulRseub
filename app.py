@@ -16,11 +16,15 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 @app.route("/")
 @app.route("/get_offers")
 def get_offers():
     offers = list(mongo.db.offers.find())
+    # maybe format the date
+
     return render_template("offers.html", offers=offers)
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -50,6 +54,7 @@ def register():
 
     return render_template("register.html")
 
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -76,6 +81,7 @@ def login():
 
     return render_template("login.html")
 
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # get the logged in user's username from database
@@ -94,6 +100,11 @@ def logout():
     flash("You have been logged out.....goodbye")
     session.pop("username")
     return redirect(url_for("login"))
+
+
+@app.route("/add_offer")
+def add_offer():
+    return render_template("add_offer.html")
 
 
 if __name__ == "__main__":

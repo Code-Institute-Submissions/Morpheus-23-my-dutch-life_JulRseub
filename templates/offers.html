@@ -7,22 +7,29 @@
     <li>
         <div class="collapsible-header black-text light-green darken-4 text-shadow">
             <i class="fa-solid fa-angle-down"></i>
-            <strong>{{ offer.offer_name }}</strong> : {{ offer.collection_date }}
+            <strong>{{ offer.name }}</strong> : {{ offer.collection_date_start }}
             {% if offer.is_hot_product == "on" %}
-            <i class="fa-solid fa-fire black-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Hot Product!"></i>
+            <i class="fa-solid fa-fire black-text text-lighten-4 tooltipped" data-position="right"
+                data-tooltip="Hot Product!"></i>
             {% endif %}
             {% if offer.is_frozen_product == "on" %}
-            <i class="fa-solid fa-snowflake black-text text-lighten-4 tooltipped" data-position="right" data-tooltip="Frozen Product!"></i>
+            <i class="fa-solid fa-snowflake black-text text-lighten-4 tooltipped" data-position="right"
+                data-tooltip="Frozen Product!"></i>
             {% endif %}
         </div>
         <div class="collapsible-body">
             <strong>{{ offer.category_name }}</strong>
             <p>
-                {{ offer.offer_description }}
-            </p>>
+                What is on offer: {{ offer.description }}
+            </p>
             <p>
-                {{ offer.offer_collection_point }}
-            </p>>
+                Where to find it: {{ offer.collection_point }}
+            </p>
+            <p>
+                When to collect it: {{ offer.collection_date_start }}</p>
+            <p>
+                This offer expires: {{ offer.collection_date_end }}
+            </p>
         </div>
     </li>
     {% endfor %}

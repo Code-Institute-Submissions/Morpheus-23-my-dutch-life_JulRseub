@@ -27,14 +27,14 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('get_offers') }}">Home</a></li>
                         {% if session.username %}
-                            <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
-                            <li><a href="#">Offers</a></li>
-                            <li><a href="#">Manage Categories</a></li>
-                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('add_offer') }}">New Offers</a></li>
+                        <li><a href="#">Manage Categories</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
-                            <li><a href="{{ url_for('login') }}">Log In</a></li>
-                            <li><a href="{{ url_for('register') }}">Register</a></li>
-                            <li><a href="#">Contact Admin</a></li>
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        <li><a href="#">Contact Admin</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -47,14 +47,14 @@
                 </li>
                 <li><a href="{{ url_for('get_offers') }}">Home</a></li>
                 {% if session.username %}
-                    <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
-                    <li><a href="#">Offers</a></li>
-                    <li><a href="#">Manage Categories</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
+                <li><a href="{{ url_for('add_offer') }}">New Offers</a></li>
+                <li><a href="#">Manage Categories</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                    <li><a href="#">Contact Admin</a></li>
+                <li><a href="{{ url_for('login') }}">Log In</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+                <li><a href="#">Contact Admin</a></li>
                 {% endif %}
             </ul>
         </header>
