@@ -138,6 +138,11 @@ def add_offer():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_offer.html", categories=categories)
 
+@app.route("/edit_offer/<offer_id>", methods=["GET", "POST"])
+def edit_offer(offer_id):
+    offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_offer.html", offer=offer, categories=categories)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
