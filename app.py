@@ -6,7 +6,6 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
-from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -109,17 +108,14 @@ def add_offer():
     if request.method == "POST":
         is_hot_product = "on" if request.form.get("is_hot_product") else "off"
         is_frozen_product = "on" if request.form.get("is_frozen_product") else "off"
-        # get date timevalues from UI to format
+
         collection_date_start = request.form.get("offer_collection_date")
         collection_time_start = request.form.get("offer_collection_start_time")
         collection_time_end = request.form.get("offer_collection_expiry_time")
 
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-        # 08 Apr, 2022 11:36 AM
-        #collection_start = datetime().strptime(collection_start, "%d %b, %Y %I:%M %p")
 
-        #  datetime.strptime(collection_date_start, "%d %b, %Y")
         offer = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
@@ -140,6 +136,35 @@ def add_offer():
 
 @app.route("/edit_offer/<offer_id>", methods=["GET", "POST"])
 def edit_offer(offer_id):
+
+    if request.method == "POST":
+        is_hot_product = "on" if request.form.get("is_hot_product") else "off"
+        is_frozen_product = "on" if request.form.get("is_frozen_product") else "off"
+
+        collection_date_start = request.form.get("offer_collection_date")
+        collection_time_start = request.form.get("offer_collection_start_time")
+        collection_time_end = request.form.get("offer_collection_expiry_time")
+
+        collection_start = collection_date_start + " " + collection_time_start
+        collection_end = collection_date_start + " " + collection_time_end
+
+        updated_offer = {
+            "category_name": request.form.get("category_name"),
+            "name": request.form.get("offer_name"),
+            "description": request.form.get("offer_description"),
+            "collection_date_start": collection_start,
+            "collection_date_end": collection_end,
+            "collection_point": request.form.get("offer_collection_point"),
+            "is_hot_product": is_hot_product,
+            "is_frozen_product": is_frozen_product,
+            "member_username": session["username"]
+        }
+        # todo fix update - 
+        # mongo.db.offers.update_one({"_id": ObjectId(offer_id)}, updated_offer)
+        #flash("Task Successfully Updated")
+        return redirect(url_for("get_offers"))
+ 
+
     offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_offer.html", offer=offer, categories=categories)
