@@ -50,7 +50,7 @@ def register():
 
         # add new member to 'session' cookie
         session["username"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Your registration is successful, welcome to the Sharing-is-Caring community!")
         return redirect(url_for("profile", username=session["username"]))
 
     return render_template("register.html")
@@ -68,7 +68,7 @@ def login():
             if check_password_hash(
                 existing_member["password"], request.form.get("password")):
                     session["username"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    flash("Welcome {}".format(request.form.get("username")))
                     return redirect(url_for("profile", username=session["username"]))
             else:
                 # invalid password match
@@ -106,8 +106,10 @@ def logout():
 @app.route("/add_offer", methods=["GET", "POST"])
 def add_offer():
     if request.method == "POST":
-        is_hot_product = "on" if request.form.get("is_hot_product") else "off"
-        is_frozen_product = "on" if request.form.get("is_frozen_product") else "off"
+        is_hot_product = "on" if request.form.get(
+            "is_hot_product") else "off"
+        is_frozen_product = "on" if request.form.get(
+            "is_frozen_product") else "off"
 
         collection_date_start = request.form.get("offer_collection_date")
         collection_time_start = request.form.get("offer_collection_start_time")
@@ -125,21 +127,23 @@ def add_offer():
             "collection_point": request.form.get("offer_collection_point"),
             "is_hot_product": is_hot_product,
             "is_frozen_product": is_frozen_product,
-            "member_username": session["username"]
         }
         mongo.db.offers.insert_one(offer)
-        flash("Task Successfully Added")
+        flash("Thank you, your offer has been successfully added")
         return redirect(url_for("get_offers"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_offer.html", categories=categories)
 
+
 @app.route("/edit_offer/<offer_id>", methods=["GET", "POST"])
 def edit_offer(offer_id):
 
     if request.method == "POST":
-        is_hot_product = "on" if request.form.get("is_hot_product") else "off"
-        is_frozen_product = "on" if request.form.get("is_frozen_product") else "off"
+        is_hot_product = "on" if request.form.get(
+            "is_hot_product") else "off"
+        is_frozen_product = "on" if request.form.get(
+            "is_frozen_product") else "off"
 
         collection_date_start = request.form.get("offer_collection_date")
         collection_time_start = request.form.get("offer_collection_start_time")
@@ -161,13 +165,13 @@ def edit_offer(offer_id):
         }
         # todo fix update - 
         # mongo.db.offers.update_one({"_id": ObjectId(offer_id)}, updated_offer)
-        #flash("Task Successfully Updated")
-        return redirect(url_for("get_offers"))
- 
+        # flash("Task Successfully Updated")
+        return redirect(url_for("get_offers")) 
 
     offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_offer.html", offer=offer, categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
