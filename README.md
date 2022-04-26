@@ -10,7 +10,7 @@ The site enables members from the community to register as a member, browse what
 
 For the community the value of the site is an easy to use platform to do what they have been doing, for the site owner it is pure enjoyment of finding the like minded sharing and caring attitude of other community members aiming to not let any peasoup or "oliebollen" go to waste.
 
-The website is not area specific and can very easily be applied for other areas / communities, if desired.
+The website is not area specific and can very easily be adapted / applied for other areas / communities, if desired.
 
 
 ## User Experience (UX)
