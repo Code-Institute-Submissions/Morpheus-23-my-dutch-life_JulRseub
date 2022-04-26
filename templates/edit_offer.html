@@ -22,14 +22,16 @@
                 <label for="category_name">Offer Category</label>
             </div>
         </div>
+        <!-- offer name -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-hand-holding-heart prefix black-text"></i>
                 <input id="offer_name" name="offer_name" minlength="4" maxlength="50" type="text" class="validate"
-                value="{{ offer.name }}" required>
+                    value="{{ offer.name }}" required>
                 <label for="offer_name">Offer Name</label>
             </div>
         </div>
+        <!-- offer description -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-pen prefix black-text"></i>
@@ -40,6 +42,7 @@
                 <label for="offer_description">Offer Description</label>
             </div>
         </div>
+        <!-- offer collection point -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-map-location prefix black-text"></i>
@@ -50,39 +53,43 @@
                 <label for="offer_collection_point">Offer collection address</label>
             </div>
         </div>
+        <!-- offer collection date -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-calendar-check prefix black-text"></i>
-                <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text" class="datepicker validate"
-                    value="{{ offer.collection_date_start }}" required>
+                <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text"
+                    class="datepicker validate" value="{{ offer.collection_date_start }}" required>
                 <label for="offer_collection_date">Offer Collection Date</label>
             </div>
         </div>
+        <!-- offer collection start time -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-clock prefix black-text"></i>
-                <input id="offer_collection_start_time" name="offer_collection_start_time" type="text" class="timepicker validate"
-                value="{{ offer.collection_date_start }}" required>
+                <input id="offer_collection_start_time" name="offer_collection_start_time" type="text"
+                    class="timepicker validate" value="{{ offer.collection_date_start }}" required>
                 <label for="offer_collection_start_time">Offer Collection Start Time</label>
             </div>
         </div>
+        <!-- offer collection expiry time -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-hourglass-end prefix black-text"></i>
-                <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text" class="timepicker validate"
-                value="{{ offer.collection_date_end }}" required>
+                <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text"
+                    class="timepicker validate" value="{{ offer.collection_date_end }}" required>
                 <label for="offer_collection_expiry_time">Offer Collection Expiry Time</label>
             </div>
         </div>
+        <!-- hot product button -->
         <div id="hot_product_id" class="row">
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fa-solid fa-fire prefix black-text"></i>
                     <label for="is_hot_product">
                         {% if offer.is_hot_product == "on" %}
-                            <input type="checkbox" id="is_hot_product" name="is_hot_product" checked>
+                        <input type="checkbox" id="is_hot_product" name="is_hot_product" checked>
                         {% else %}
-                            <input type="checkbox" id="is_hot_product" name="is_hot_product">
+                        <input type="checkbox" id="is_hot_product" name="is_hot_product">
                         {% endif %}
                         <span class="lever"></span>
                         Caution: Hot Product !
@@ -90,15 +97,16 @@
                 </div>
             </div>
         </div>
+        <!-- frozen product button -->
         <div id="frozen_product_id" class="row">
             <div class="input-field col s12">
                 <div class="switch">
                     <i class="fa-solid fa-snowflake prefix black-text"></i>
                     <label for="is_frozen_product">
                         {% if offer.is_frozen_product == "on" %}
-                            <input type="checkbox" id="is_frozen_product" name="is_frozen_product" checked>
+                        <input type="checkbox" id="is_frozen_product" name="is_frozen_product" checked>
                         {% else %}
-                            <input type="checkbox" id="is_frozen_product" name="is_frozen_product">
+                        <input type="checkbox" id="is_frozen_product" name="is_frozen_product">
                         {% endif %}
                         <span class="lever"></span>
                         Note: Frozen Product !
@@ -110,7 +118,7 @@
         <div class="row">
             <div class="col s12 center-align">
                 <!-- cancel button -->
-                <a href="{{ url_for('get_offers') }}" class="btn-large red text-shadow">
+                <a href="{{ url_for('get_offers') }}" class="btn-large orange text-shadow">
                     Cancel <i class="fas fa-times-circle right"></i>
                 </a>
                 <!-- submit button -->

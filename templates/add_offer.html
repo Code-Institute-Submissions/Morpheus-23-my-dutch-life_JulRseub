@@ -5,20 +5,20 @@
 
 <div class="row card-panel beige lighten-3">
     <form class="col s12" method="POST" action="{{ url_for('add_offer') }}">
-         <!-- select offer category -->
+        <!-- select offer category -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-folder-open prefix black-text"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="category_name">Offer Category</label>
             </div>
         </div>
-         <!-- offer name -->
+        <!-- offer name -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-hand-holding-heart prefix black-text"></i>
@@ -27,7 +27,7 @@
                 <label for="offer_name">Offer Name</label>
             </div>
         </div>
-         <!-- offer description -->
+        <!-- offer description -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-pen prefix black-text"></i>
@@ -36,7 +36,7 @@
                 <label for="offer_description">Offer Description</label>
             </div>
         </div>
-         <!-- offer collection address -->
+        <!-- offer collection address -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-map-location prefix black-text"></i>
@@ -45,33 +45,34 @@
                 <label for="offer_collection_point">Offer collection address</label>
             </div>
         </div>
-         <!-- offer collection date -->
+        <!-- offer collection date -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-calendar-check prefix black-text"></i>
-                <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text" class="datepicker validate"
-                    required>
+                <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text"
+                    class="datepicker validate" required>
                 <label for="offer_collection_date">Offer Collection Date</label>
             </div>
         </div>
-         <!-- offer collection start time -->
+        <!-- offer collection start time -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-clock prefix black-text"></i>
-                <input id="offer_collection_start_time" name="offer_collection_start_time" type="text" class="timepicker validate"
-                    required>
+                <input id="offer_collection_start_time" name="offer_collection_start_time" type="text"
+                    class="timepicker validate" required>
                 <label for="offer_collection_start_time">Offer Collection Start Time</label>
             </div>
         </div>
-         <!-- offer collection expiry time -->
+        <!-- offer collection expiry time -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fa-solid fa-hourglass-end prefix black-text"></i>
-                <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text" class="timepicker validate" required>
+                <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text"
+                    class="timepicker validate" required>
                 <label for="offer_collection_expiry_time">Offer Collection Expiry Time</label>
             </div>
         </div>
-         <!-- hot product button -->
+        <!-- hot product button -->
         <div id="hot_product_id" class="row">
             <div class="input-field col s12">
                 <div class="switch">
@@ -84,7 +85,7 @@
                 </div>
             </div>
         </div>
-         <!-- frozen product button -->
+        <!-- frozen product button -->
         <div id="frozen_product_id" class="row">
             <div class="input-field col s12">
                 <div class="switch">

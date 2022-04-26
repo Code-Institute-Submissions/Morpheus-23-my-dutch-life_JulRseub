@@ -1,5 +1,4 @@
 import os
-import logging
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -8,6 +7,7 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+
 
 app = Flask(__name__)
 
@@ -22,8 +22,6 @@ mongo = PyMongo(app)
 @app.route("/get_offers")
 def get_offers():
     offers = list(mongo.db.offers.find())
-    # maybe format the date
-
     return render_template("offers.html", offers=offers)
 
 
@@ -50,7 +48,7 @@ def register():
 
         # add new member to 'session' cookie
         session["username"] = request.form.get("username").lower()
-        flash("Your registration is successful, welcome to the Sharing-is-Caring community!")
+        flash("Your registration is successful, welcome!")
         return redirect(url_for("profile", username=session["username"]))
 
     return render_template("register.html")
@@ -67,9 +65,10 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                 existing_member["password"], request.form.get("password")):
-                    session["username"] = request.form.get("username").lower()
-                    flash("Welcome {}".format(request.form.get("username")))
-                    return redirect(url_for("profile", username=session["username"]))
+                session["username"] = request.form.get("username").lower()
+                flash("Welcome {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["username"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -110,18 +109,16 @@ def add_offer():
             "is_hot_product") else "off"
         is_frozen_product = "on" if request.form.get(
             "is_frozen_product") else "off"
-
         collection_date_start = request.form.get("offer_collection_date")
         collection_time_start = request.form.get("offer_collection_start_time")
         collection_time_end = request.form.get("offer_collection_expiry_time")
-
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-
         offer = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
+            "offered_by": request.form.get("username"),
             "collection_date_start": collection_start,
             "collection_date_end": collection_end,
             "collection_point": request.form.get("offer_collection_point"),
@@ -138,39 +135,34 @@ def add_offer():
 
 @app.route("/edit_offer/<offer_id>", methods=["GET", "POST"])
 def edit_offer(offer_id):
-
     if request.method == "POST":
         is_hot_product = "on" if request.form.get(
             "is_hot_product") else "off"
         is_frozen_product = "on" if request.form.get(
             "is_frozen_product") else "off"
-
         collection_date_start = request.form.get("offer_collection_date")
         collection_time_start = request.form.get("offer_collection_start_time")
         collection_time_end = request.form.get("offer_collection_expiry_time")
-
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-
-        updated_offer = {
+        offer = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
+            "offered_by": request.form.get("username"),
             "collection_date_start": collection_start,
             "collection_date_end": collection_end,
             "collection_point": request.form.get("offer_collection_point"),
             "is_hot_product": is_hot_product,
             "is_frozen_product": is_frozen_product,
-            "member_username": session["username"]
         }
-        # todo fix update - 
-        # mongo.db.offers.update_one({"_id": ObjectId(offer_id)}, updated_offer)
-        # flash("Task Successfully Updated")
-        return redirect(url_for("get_offers")) 
+        mongo.db.offers.update({"_id": ObjectId(offer_id)}, submit)
+        flash("Great, your offer has been successfully updated")
 
     offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_offer.html", offer=offer, categories=categories)
+    return render_template(
+        "edit_offer.html", offer=offer, categories=categories)
 
 
 if __name__ == "__main__":

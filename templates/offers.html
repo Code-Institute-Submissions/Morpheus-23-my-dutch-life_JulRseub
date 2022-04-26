@@ -9,8 +9,8 @@
         <div class="collapsible-header black-text light-green darken-4 text-shadow">
             <div class="col s3">
                 <i class="fas fa-caret-down"></i>
-                <a href="" class="btn-small green accent-4">Done</a>
-                <a href="{{ url_for('edit_offer', offer_id=offer._id) }}" class="btn-small light-blue lighten-1">Edit</a>
+                <a href="" class="btn-small blue accent-4">Done</a>
+                <a href="{{ url_for('edit_offer', offer_id=offer._id) }}" class="btn-small yellow lighten-1">Edit</a>
             </div>
             <div class="col s9">
                 <i class="fa-solid fa-angle-down"></i>
@@ -27,18 +27,12 @@
         </div>
         <div class="collapsible-body">
             <strong>{{ offer.category_name }}</strong>
-            <p>
-                What is on offer: {{ offer.description }}
-            </p>
-            <p>
-                Where to find it: {{ offer.collection_point }}
-            </p>
-            <p>
-                When to collect it: {{ offer.collection_date_start }}</p>
-            <p>
-                This offer expires: {{ offer.collection_date_end }}
-            </p>
-            <p>offer is from: {{ username }}</p>
+            <p>What is on offer: {{ offer.description }}</p>
+            <p>Offered by: {{ created_by }}</p>
+            <p>Where to find it: {{ offer.collection_point }}</p>
+            <p>When to collect it: {{ offer.collection_date_start }}</p>
+            <p>This offer expires: {{ offer.collection_date_end }}</p>
+            <p>This offer is from: {{ created_by }}</p>
         </div>
     </li>
     {% endfor %}
