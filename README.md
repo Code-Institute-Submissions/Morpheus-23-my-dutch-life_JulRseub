@@ -6,7 +6,7 @@ I have been in this country for three years and admit that even though the pande
 Developing this website brought me great joy and I would love to get it ready to share with the community.  I would definitely be an active participant.  I have made my share of petfood donations (my cats insist they want a varied diet, and once I buy enough to last a while they change their minds and we end up with tins, pouches and bags of catfood that I know could be well enjoyed by other, less fussy felines in our neighbourhood).
 In my opinion I now live in a community that can appreciate diversity and enjoy some of the simple joys life can offer, like sharing rather than letting those extra eggs or apples go to waste.
 This website is a tool that the community can use to ensure those products are shared, before the "best before" time runs out. (even then it may still not go to the waste bin !)  Sharing-is-Caring can enable like minded people to connect and as a result this website came to fruition...yes enjoy the pun. 
-The site enables members from the community to register as a member, browse what is on offer, add their own offerings to the list, amend and delete their offers when required. When new members sign up, they need to provide their postal code to confirm they are from the area.  It is not a security layer but more an informal manner for keeping it within the community. At this stage this is still a manual check being attended to by the site owner, with the intention to change the code to only allow new members to sign up should their postal codes correspond with specific parameters (for the area)  Visitors may also contact the admin (site owner) by sending an onsite email.  
+The site enables members from the community to register as an online member, browse what is on offer, add their own offerings to the list, amend and delete their offers when required. When new members sign up, they need to provide their postal code to confirm they are from the area.  It is not a security layer but more an informal manner for keeping it within the community. At this stage this is still a manual check being attended to by the site owner, with the intention to change the code to only allow new members to sign up should their postal codes correspond with specific parameters (for the area).  Visitors may also contact the admin (site owner) by sending an email.  
 
 For the community the value of the site is an easy to use platform to do what they have been doing, for the site owner it is pure enjoyment of finding the like minded sharing and caring attitude of other community members aiming to not let any peasoup or "oliebollen" go to waste.
 
@@ -71,22 +71,21 @@ The main aim and focus of Sharing-is-Caring is to enhance the experience of livi
 ### Scope
 
 Initial release: Functional specifications
-
-    - the design and layout should be kept simplistic throughout and very easy to use (taking time to give away free meals, products, invite strangers to picnics and barbeques should not become a cumbersome exercise)
-    - all pages should clearly indicate all the clickable links in the navigation bar, on all types of devices
-    - the home page should provide basic information and be clear about the purpose of the website
-    - the registration page is where a member can register to enable them to have a profile on the website, which will grante them access to more features such as posting their own offerings, amending and / or deleting same. Said page will require a username, firstname, surname, postal code and password to be inserted.
-        - disclaimer, rules and guidelines at the bottom of the registration page are just a few basic rules / guidelines which new members are required to read when signing up, and reading same needs to be confirmed by clicking the check box which will enable their registration to be complete
-        - in an attemt to keep the website a friendly environment for all (prior to making the site available for the public, consulation with a law practitioner will be required to ensure that the disclaimer meets the needs of the site owner and is in accordance with the governing laws, further consideration of good conduct rules may be considered, prior to providing a feature where the members may be enabled to upload images, privacy laws need to be considered and further guidelines in regards thereto may need to be reflected on the site.)
-    -   the login page will enable a registered member to access their profile by inserting their username and password and thus gaining access to their profile.
-    - the logout menu item will enable a member to log out of their profile
-    -  offers, the main purpose of the website, where all the offers and invitations happen consists of various categories such as meals, produce, pets related, garden, household, bicycles, invitations, other.
-    -  manage categories is a feature available to the site owner only, enabling said owner to manage/amend the categories, create new categories, delete categories
-    -   contact admin page is an onsite email enabling the public / community to contact the site ownwer, should they require assistance, have queries, suggestions, complaints, concerns, compliments,
+- the design and layout should be kept simplistic throughout and very easy to use (taking time to give away free meals, products, invite strangers to picnics and barbeques should not become a cumbersome exercise)
+- all pages should clearly indicate all the clickable links in the navigation bar, on all types of devices
+- the home page should provide basic information and be clear about the purpose of the website
+- the registration page is where a member can register to enable them to have a profile on the website, which will grante them access to more features such as posting their own offerings, amending and / or deleting same. Said page will require a username, firstname, surname, postal code and password to be inserted.
+- disclaimer, rules and guidelines at the bottom of the registration page are just a few basic rules / guidelines which new members are required to read when signing up, and reading same needs to be confirmed by clicking the check box which will enable their registration to be complete
+- in an attemt to keep the website a friendly environment for all (prior to making the site available for the public, consulation with a law practitioner will be required to ensure that the disclaimer meets the needs of the site owner and is in accordance with the governing laws, further consideration of good conduct rules may be considered, prior to providing a feature where the members may be enabled to upload images, privacy laws need to be considered and further guidelines in regards thereto may need to be reflected on the site.)
+- the login page will enable a registered member to access their profile by inserting their username and password and thus gaining access to their profile.
+- the logout menu item will enable a member to log out of their profile
+- offers, the main purpose of the website, where all the offers and invitations happen consists of various categories such as meals, produce, pets related, garden, household, bicycles, invitations, other.
+-  manage categories is a feature available to the site owner only, enabling said owner to manage/amend the categories, create new categories, delete categories
+- contact admin page is an onsite email enabling the public / community to contact the site ownwer, should they require assistance, have queries, suggestions, complaints, concerns, compliments,
 
 Possible future release:
-    - depending on the outcome of legal consultation and depending whether required / requested by the members of the site, the site owner will consider enabling members to upload photographs of their offerings, however said photographs will have to be authorised by the site owner before appearing on the site to ensure suitability such as privacy laws etc where not breached.
-    - FAQ: frequently asked questions page may be considered and developed, based upon community interaction via the onsite email form.
+- depending on the outcome of legal consultation and depending whether required / requested by the members of the site, the site owner will consider enabling members to upload photographs of their offerings, however said photographs will have to be authorised by the site owner before appearing on the site to ensure suitability such as privacy laws etc where not breached.
+- FAQ: frequently asked questions page may be considered and developed, based upon community interaction via the onsite email form.
 
 
 ### Structure
@@ -191,7 +190,7 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
 
 Surface Plane
-Colours, typography, design elements, images, effects
+Colours, typography, design elements, images, effects to be discussed.
 
 
 - Screenshots reflecting the following pages:
@@ -526,8 +525,7 @@ steps
 
 Technologies Used
 
-Design
-GlooMaps: https://www.gloomaps.com/nMkFjnEiHn - used for the 
+
 
 Languages
 - HTML5
@@ -547,7 +545,7 @@ backend
 python
 Flask - micro framework for building applications
 FlaskPyMongo - 
-Werkzeug - a library framework ?
+Werkzeug - a library framework
 MongoDB - hosting the database in a cloud environment
 
 Gitpod - developing the site
@@ -571,8 +569,8 @@ Code
 
 ## Unimplemented assessment criteria
 
-* Completion / finalisation of ..................
-* Readme.md to get new ..........................
+* Completion / finalisation of website functionalities, css to be amended, wireframes to be uploaded, landing page and contact admin page to be completed, testing to be finalised and documented, deployment to be done, readme.md to be finalised
+
 
 ## Content
 
@@ -580,9 +578,9 @@ Code
 - All images were taken from [Pexels](https://pexels.com/)
 - The sitemap was prepared using [GlooMaps](https://gloomaps.com/)
 - The databa schema was prepared using [Lucid.app](https://lucid.app/)
-- Font and background colours were identified by [W3Schools](https://www.w3schools.com/colors/)
-- Some design ideas were taken from 
-- A lot of technical implementation information were taken from [W3Schools](www.w3schools.com)
+- Font and background colours were identified by [___](https://www./)
+- Some design ideas were taken from >>>>
+- A lot of technical implementation information were taken from [_____](_____)
 - Some information was taken from [StackOverflow](https://stackoverflow.com/)
 
 ## Directory structure
