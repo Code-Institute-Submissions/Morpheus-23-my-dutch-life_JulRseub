@@ -1,3 +1,5 @@
+PLEASE NOTE: README AND PROJECT UNFINISHED UPON SUBMISSION
+
 # Sharing-is-Caring
 
 [Sharing-is-Caring](https://morpheus-23.github.io/__________) website is representative of the community where I live. On my walks through our neighbourhood I have often come accross casual displays of generosity. It is not strange to find a table on the front lawn of a property, displaying fruits, vegetables, eggs, plant seedlings, honey, home made jams, second hand books, childrens' toys. The offerings vary. Sometimes just a few products, sometimes a lot.  There would be a sign that says help yourself, sometimes it may indicate you can take what you need and leave a small fee if you wish. Even though the random offerings are quite wonderful to come accross, not all streets are busy, the weather can ruin a splendid gesture... and off course the birds may get into the fruits...

@@ -165,7 +165,14 @@ def edit_offer(offer_id):
         "edit_offer.html", offer=offer, categories=categories)
 
 
+@app.route("/delete_offer/<offer_id>")
+def delete_offer(offer_id):
+    mongo.db.offers.remove({"_id": ObjectId(offer_id)})
+    flash("Offer successfully deleted")
+    return redirect(url_for("get_offers"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
