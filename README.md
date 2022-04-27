@@ -101,11 +101,11 @@ The purpose of the website is to bring members of the community together by enab
 
 The data schema below was prepared by using [Lucid.app](https://lucid.app/)
 
-PLACE DATA SCHEMA HERE !!!!!!
+ ![Database schema](./readme/schema-db.png)
 
 The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
-PLACE SITEMAP HERE !!!!!!
+![Sitemap](./readme/sitemap.png)
 
 
 ### Skeleton
