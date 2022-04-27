@@ -145,7 +145,7 @@ def edit_offer(offer_id):
         collection_time_end = request.form.get("offer_collection_expiry_time")
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-        offer = {
+        submit = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
