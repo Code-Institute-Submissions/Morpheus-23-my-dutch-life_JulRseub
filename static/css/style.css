@@ -58,6 +58,16 @@ div.checkbox {
     animation-fill-mode: forwards;
 }
 
+#admin-pic { 
+    height:600px;
+    width: 100%;
+    background: url("../images/admin-pic.jpg") center center/cover no-repeat;
+    animation-name: hero-zoom;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+
 @keyframes hero-zoom {
     from{
         transform: scale(0.8);
