@@ -1,13 +1,9 @@
 .brand-logo {
     margin-left: 5%;
-    text: #ff3d00 deep-orange accent-3;
 }
-]
-
-
 
 .text-shadow {
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .flashes h4 {
@@ -15,15 +11,15 @@
 }
 
 .nav-wrapper {
-    background-color: olivedrab
+    background-color: red;
 }
 
 .collapsible-header {
-    background-color: orangered;
+    background-color: yellow;
 }
 
 .collapsible-body {
-    background-color: antiquewhite;
+    background-color: lime;
 }
 
 .btn-small {
@@ -32,9 +28,94 @@
 
 .collapsible-header .col strong {
     margin: 7px;
-    line-height: 42px;
+    line-height: 142px;
+    background-color: purple;
 }
 
 body {
-    background-color: olivedrab
+    background-color: cyan;
+}
+
+
+div.checkbox {
+    background-color: darkorange;
+}
+
+
+#is_hot_product {
+    color: crimson;
+}
+
+
+/* -------- welcome image */
+
+#welcome-pic { 
+    height:600px;
+    width: 100%;
+    background: url("../images/welcome-pic.jpg") center center/cover no-repeat;
+    animation-name: hero-zoom;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-zoom {
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- Footer */
+
+footer {
+    background-color: #e0e0e0;
+    text-align: center;
+    padding: 33px;
+}
+
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 150%;
+    text-align: center;
+    text-decoration: none;
+    padding: 4%;
+    color: #fafafa;
+    margin: 3%;
+    border-radius: 50%;
+
+}
+
+.fa-facebook {
+    background: blue;
+    color: white;
+}
+
+.fa-instagram {
+    background: red;
+    color: white;
+}
+
+.fa-twitter {
+    background: cyan;
+    color: white;
 }

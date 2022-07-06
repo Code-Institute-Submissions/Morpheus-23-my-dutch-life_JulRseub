@@ -25,6 +25,26 @@ def get_offers():
     return render_template("offers.html", offers=offers)
 
 
+@app.route("/welcome", methods=["GET", "POST"])
+def welcome():
+    if request.method == "POST":
+        # the landing page providing info about site
+        existing_member = mongo.db.members.find_one(
+            {"username": request.form.get("username").lower()})
+
+    return render_template("welcome.html")
+
+
+@app.route("/contact_admin", methods=["GET", "POST"])
+def contact_admin():
+    if request.method == "POST":
+        # the last page, being contact admin
+        existing_member = mongo.db.members.find_one(
+            {"username": request.form.get("username").lower()})
+
+    return render_template("contact_admin.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

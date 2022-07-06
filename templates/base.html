@@ -19,13 +19,13 @@
         <header>
 
             <!-- main navbar -->
-            <nav class="nav-extended text-shadow green darken-4">
+            <nav class="nav-extended text-shadow red lighten-3">
                 <div class="nav-wrapper">
                     <a href="{{ url_for('get_offers') }}" class="brand-logo">Sharing-is-Caring (a community project)</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="{{ url_for('get_offers') }}">Home</a></li>
+                        <li><a href="{{ url_for('welcome') }}">Welcome</a></li>
+                        <li><a href="{{ url_for('get_offers') }}">All Offers</a></li>
                         {% if session.username %}
                         <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_offer') }}">New Offers</a></li>
@@ -34,7 +34,7 @@
                         {% else %}
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
-                        <li><a href="#">Contact Admin</a></li>
+                        <li><a href="{{ url_for('contact_admin') }}">Contact Admin</a></li>
                         {% endif %}
                     </ul>
                 </div>
@@ -45,7 +45,8 @@
                 <li>
                     <h4 class="center-align green-text text-darken 4">Sharing-is-Caring</h4>
                 </li>
-                <li><a href="{{ url_for('get_offers') }}">Home</a></li>
+                <li><a href="{{ url_for('welcome') }}">Welcome</a></li>
+                <li><a href="{{ url_for('get_offers') }}">All Offers</a></li>
                 {% if session.username %}
                 <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_offer') }}">New Offers</a></li>
