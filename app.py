@@ -18,31 +18,33 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/")
 @app.route("/get_offers")
 def get_offers():
     offers = list(mongo.db.offers.find())
     return render_template("offers.html", offers=offers)
 
 
-@app.route("/welcome", methods=["GET", "POST"])
+@app.route("/")
+@app.route("/welcome")
 def welcome():
-    if request.method == "POST":
-        # the landing page providing info about site
-        existing_member = mongo.db.members.find_one(
-            {"username": request.form.get("username").lower()})
-
+# the landing page providing info about site
     return render_template("welcome.html")
 
 
-@app.route("/contact_admin", methods=["GET", "POST"])
+@app.route("/contact_admin")
 def contact_admin():
+     # the last page, being contact admin
+    return render_template("contact_admin.html")
+
+
+@app.route("/manage_categories", methods=["GET", "POST"])
+def manage_categories():
     if request.method == "POST":
-        # the last page, being contact admin
+        # manage categories page
         existing_member = mongo.db.members.find_one(
             {"username": request.form.get("username").lower()})
 
-    return render_template("contact_admin.html")
+    return render_template("manage_categories.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -138,7 +140,7 @@ def add_offer():
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
-            "offered_by": request.form.get("username"),
+            "offered_by": session["username"],
             "collection_date_start": collection_start,
             "collection_date_end": collection_end,
             "collection_point": request.form.get("offer_collection_point"),
@@ -165,18 +167,18 @@ def edit_offer(offer_id):
         collection_time_end = request.form.get("offer_collection_expiry_time")
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-        submit = {
+        offer = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
-            "offered_by": request.form.get("username"),
+            "offered_by": session["username"],
             "collection_date_start": collection_start,
             "collection_date_end": collection_end,
             "collection_point": request.form.get("offer_collection_point"),
             "is_hot_product": is_hot_product,
             "is_frozen_product": is_frozen_product,
         }
-        mongo.db.offers.update({"_id": ObjectId(offer_id)}, submit)
+        mongo.db.offers.update({"_id": offer_id}, offer)
         flash("Great, your offer has been successfully updated")
 
     offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
