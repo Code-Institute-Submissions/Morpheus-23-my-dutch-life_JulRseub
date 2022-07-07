@@ -3,6 +3,17 @@
 
 <h3 class="black-text center-align">All Offers</h3>
 
+<!-- https://stackoverflow.com/questions/30207047/how-to-get-multi-select-dropdown-in-materialize-css -->
+<div class="input-field col s12">
+    <select id="selected_categories" multiple>
+        <option value="" disabled selected>Filter by categories</option>
+        {% for category in categories %}
+            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+        {% endfor %}
+    </select>
+    <label>Please select your desired categories</label>
+</div>
+
 <ul class="collapsible">
     {% for offer in offers %}
     <li>

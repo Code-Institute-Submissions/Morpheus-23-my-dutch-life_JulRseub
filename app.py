@@ -20,8 +20,15 @@ mongo = PyMongo(app)
 
 @app.route("/get_offers")
 def get_offers():
+    # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
+
+    selected_categories = request.args.get('selected_categories', 'all')
+    print("selected_categories=" + selected_categories)
+
+    categories = list(mongo.db.categories.find())
+
     offers = list(mongo.db.offers.find())
-    return render_template("offers.html", offers=offers)
+    return render_template("offers.html", offers=offers, categories=categories)
 
 
 @app.route("/")

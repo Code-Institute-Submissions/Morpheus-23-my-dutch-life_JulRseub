@@ -44,7 +44,9 @@ $(document).ready(function(){
                   }
               });
           }
-      });
+      }).on("change", function () {
+        console.log("sdsdsdsdaaaa");
+
+    });
   }
 });
-
