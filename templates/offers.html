@@ -3,12 +3,12 @@
 
 <h3 class="black-text center-align">All Offers</h3>
 
-<!-- https://stackoverflow.com/questions/30207047/how-to-get-multi-select-dropdown-in-materialize-css -->
+<!-- code taken from https://stackoverflow.com/questions/30207047/how-to-get-multi-select-dropdown-in-materialize-css -->
 <div class="input-field col s12">
     <select id="selected_categories" multiple>
         <option value="" disabled selected>Filter by categories</option>
         {% for category in categories %}
-            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
         {% endfor %}
     </select>
     <label>Please select your desired categories</label>
@@ -18,13 +18,9 @@
     {% for offer in offers %}
     <li>
         <div class="collapsible-header black-text light-green darken-4 text-shadow">
-            <div class="col s3">
-                <i class="fas fa-caret-down"></i>
-                {% if session.username|lower == offer.offered_by|lower %}
-                <a href="{{ url_for('delete_offer', offer_id=offer._id) }}" class="btn-small blue lighten-1">Delete</a>
-                <a href="{{ url_for('edit_offer', offer_id=offer._id) }}" class="btn-small yellow lighten-1">Edit</a>
-                {% endif %}
-            </div>
+
+            <i class="fas fa-caret-down" data-position="left"></i>
+
             <div class="col s9">
                 <strong>{{ offer.name }}</strong> : {{ offer.collection_date_start }}
                 {% if offer.is_hot_product == "on" %}
@@ -36,7 +32,17 @@
                     data-tooltip="Frozen Product!"></i>
                 {% endif %}
             </div>
+
+            <div class="col s3">
+                {% if session.username|lower == offer.offered_by|lower %}
+                <pre>
+                <a href="{{ url_for('delete_offer', offer_id=offer._id) }}" class="btn-small blue lighten-1"> Delete </a>
+                <a href="{{ url_for('edit_offer', offer_id=offer._id) }}" class="btn-small yellow lighten-1">  Edit  </a>
+                </pre>
+                {% endif %}
+            </div>
         </div>
+      
         <div class="collapsible-body">
             <strong>{{ offer.category_name }}</strong>
             <p>What is on offer: {{ offer.description }}</p>
@@ -48,5 +54,4 @@
     </li>
     {% endfor %}
 </ul>
-
 {% endblock %}

@@ -10,16 +10,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
             type="text/css">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+        <link rel="stylesheet" href="styles.css">
         {% block styles %}
         {% endblock %}
         <title>Care-2-Share</title>
     </head>
-
     <body>
         <header>
-
             <!-- main navbar -->
-            <nav class="nav-extended text-shadow red lighten-3">
+            <nav class="nav-extended text-shadow teal darken-4">
                 <div class="nav-wrapper">
                     <a href="{{ url_for('welcome') }}" class="brand-logo">Care-2-Share</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>

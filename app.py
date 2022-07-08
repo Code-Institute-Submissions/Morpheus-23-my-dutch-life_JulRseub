@@ -18,6 +18,13 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.route("/")
+@app.route("/welcome")
+def welcome():
+# the landing page providing info about site
+    return render_template("welcome.html")
+
+
 @app.route("/get_offers")
 def get_offers():
     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
@@ -29,19 +36,6 @@ def get_offers():
 
     offers = list(mongo.db.offers.find())
     return render_template("offers.html", offers=offers, categories=categories)
-
-
-@app.route("/")
-@app.route("/welcome")
-def welcome():
-# the landing page providing info about site
-    return render_template("welcome.html")
-
-
-@app.route("/contact_admin")
-def contact_admin():
-     # the last page, being contact admin
-    return render_template("contact_admin.html")
 
 
 @app.route("/manage_categories", methods=["GET", "POST"])
@@ -174,7 +168,7 @@ def edit_offer(offer_id):
         collection_time_end = request.form.get("offer_collection_expiry_time")
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-        offer = {
+        submit = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
@@ -185,13 +179,12 @@ def edit_offer(offer_id):
             "is_hot_product": is_hot_product,
             "is_frozen_product": is_frozen_product,
         }
-        mongo.db.offers.update({"_id": offer_id}, offer)
+        mongo.db.offers.update({"_id": ObjectId(offer_id)}, submit)
         flash("Great, your offer has been successfully updated")
 
     offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template(
-        "edit_offer.html", offer=offer, categories=categories)
+    return render_template("edit_offer.html", offer=offer, categories=categories)
 
 
 @app.route("/delete_offer/<offer_id>")
@@ -199,6 +192,12 @@ def delete_offer(offer_id):
     mongo.db.offers.remove({"_id": ObjectId(offer_id)})
     flash("Offer successfully deleted")
     return redirect(url_for("get_offers"))
+
+
+@app.route("/contact_admin")
+def contact_admin():
+     # the last page, being contact admin
+    return render_template("contact_admin.html")
 
 
 if __name__ == "__main__":

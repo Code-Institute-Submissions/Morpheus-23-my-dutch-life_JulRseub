@@ -2,6 +2,10 @@
     margin-left: 5%;
 }
 
+
+body {background-color: teal accent-1;}
+
+
 .text-shadow {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
@@ -11,7 +15,7 @@
 }
 
 .nav-wrapper {
-    background-color: red;
+    background-color: teal darken-4;
 }
 
 .collapsible-header {
@@ -23,18 +27,14 @@
 }
 
 .btn-small {
-    margin: 7px;
+    margin: 10px;
 }
 
 .collapsible-header .col strong {
     margin: 7px;
-    line-height: 142px;
-    background-color: purple;
+    line-height: 42px;
 }
 
-body {
-    background-color: cyan;
-}
 
 
 div.checkbox {
@@ -47,13 +47,13 @@ div.checkbox {
 }
 
 
-/* -------- welcome image */
+/* -------- welcome & admin images */
 
 #welcome-pic { 
     height:600px;
     width: 100%;
     background: url("../images/welcome-pic.jpg") center center/cover no-repeat;
-    animation-name: hero-zoom;
+    animation-name: pic-zoom;
     animation-duration: 6s;
     animation-fill-mode: forwards;
 }
@@ -62,13 +62,12 @@ div.checkbox {
     height:600px;
     width: 100%;
     background: url("../images/admin-pic.jpg") center center/cover no-repeat;
-    animation-name: hero-zoom;
+    animation-name: pic-zoom;
     animation-duration: 6s;
     animation-fill-mode: forwards;
 }
 
-
-@keyframes hero-zoom {
+@keyframes pic-zoom {
     from{
         transform: scale(0.8);
     }
@@ -80,21 +79,13 @@ div.checkbox {
 
 
 
-
-
-
-
-
-
-
 /* ---------------------- Footer */
 
 footer {
-    background-color: #e0e0e0;
+    background-color: darkorange;
     text-align: center;
-    padding: 33px;
+    padding: 11px;
 }
-
 
 .social-networks {
     text-align: center;
@@ -112,7 +103,6 @@ footer {
     color: #fafafa;
     margin: 3%;
     border-radius: 50%;
-
 }
 
 .fa-facebook {
