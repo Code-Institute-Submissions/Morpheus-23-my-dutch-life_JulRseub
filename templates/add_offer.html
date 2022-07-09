@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="black-text center-align">Add Offer</h3>
-<i class="fa-solid fa-user-secret prefix deep-orange-text text-darken-4"></i>nncnjdjdj
+<h3 class="center-align white-text text-shadow background-color: light-blue darken-3">Add Offer</h3>
 <div class="row card-panel beige lighten-3">
     <form class="col s12" method="POST" action="{{ url_for('add_offer') }}">
         <!-- select offer category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open prefix deep-orange-text text-darken-4"></i>
+
+                <i class="fas fa-folder-open prefix light-blue-text text-lighten-3"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Choose Category</option>
                     {% for category in categories %}
@@ -21,7 +21,7 @@
         <!-- offer name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-hand-holding-heart prefix deep-orange-text text-darken-4"></i>
+                <i class="fa-solid fa-hand-holding-heart prefix light-blue-text text-lighten-3"></i>
                 <input id="offer_name" name="offer_name" minlength="4" maxlength="50" type="text" class="validate"
                     required>
                 <label for="offer_name">Offer Name</label>
@@ -30,7 +30,7 @@
         <!-- offer description -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-pen prefix deep-orange-text text-darken-4"></i>
+                <i class="fa-solid fa-pen prefix light-blue-text text-lighten-3"></i>
                 <textarea id="offer_description" name="offer_description" minlength="10" maxlength="200"
                     class="materialize-textarea validate" required></textarea>
                 <label for="offer_description">Offer Description</label>
@@ -39,7 +39,7 @@
         <!-- offer collection address -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-map-location prefix deep-orange-text text-darken-4"></i>
+                <i class="fa-solid fa-map-location prefix light-blue-text text-lighten-3"></i>
                 <textarea id="offer_collection_point" name="offer_collection_point" minlength="10" maxlength="200"
                     class="materialize-textarea validate" required></textarea>
                 <label for="offer_collection_point">Offer collection address</label>
@@ -48,7 +48,7 @@
         <!-- offer collection date -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-calendar-check prefix deep-orange-text text-darken-4"></i>
+                <i class="fa-solid fa-calendar-check prefix light-blue-text text-lighten-3"></i>
                 <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text"
                     class="datepicker validate" required>
                 <label for="offer_collection_date">Offer Collection Date</label>
@@ -57,7 +57,7 @@
         <!-- offer collection start time -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-clock prefix deep-orange-text text-darken-4"></i>
+                <i class="fa-solid fa-clock prefix light-blue-text text-lighten-3"></i>
                 <input id="offer_collection_start_time" name="offer_collection_start_time" type="text"
                     class="timepicker validate" required>
                 <label for="offer_collection_start_time">Offer Collection Start Time</label>
@@ -66,7 +66,7 @@
         <!-- offer collection expiry time -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fa-solid fa-hourglass-end prefix deep-orange-text text-darken-4"></i>
+                <i class="fa-solid fa-hourglass-end prefix light-blue-text text-lighten-3"></i>
                 <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text"
                     class="timepicker validate" required>
                 <label for="offer_collection_expiry_time">Offer Collection Expiry Time</label>
@@ -79,7 +79,7 @@
                     <i class="fa-solid fa-fire prefix red-text text-darken-4"></i>
                     <label for="is_hot_product">
                         <input type="checkbox" id="is_hot_product" name="is_hot_product">
-                        <span class="lever"></span>
+                        <span class="lever cyan darken-4"></span>
                         Caution: Hot Product !
                     </label>
                 </div>
@@ -92,7 +92,7 @@
                     <i class="fa-solid fa-snowflake prefix blue-text text-darken-4"></i>
                     <label for="is_frozen_product">
                         <input type="checkbox" id="is_frozen_product" name="is_frozen_product">
-                        <span class="lever"></span>
+                        <span class="lever cyan darken-4"></span>
                         Note: Frozen Product !
                     </label>
                 </div>
@@ -101,7 +101,7 @@
         <!-- submit button -->
         <div class="row">
             <div class="col s12 center-align">
-                <button type="submit" class="btn-large teal darken-4 text-shadow">
+                <button type="submit" class="btn-large cyan darken-4 text-shadow">
                     Add Offer <i class="fas fa-plus-square right"></i>
                 </button>
             </div>

@@ -55,15 +55,6 @@ def get_offers():
 
     return render_template("offers.html", offers=offers, categories=categories)
 
-@app.route("/manage_categories", methods=["GET", "POST"])
-def manage_categories():
-    if request.method == "POST":
-        # manage categories page
-        existing_member = mongo.db.members.find_one(
-            {"username": request.form.get("username").lower()})
-
-    return render_template("manage_categories.html")
-
 
 @app.route("/register", methods=["GET", "POST"])
 def register():

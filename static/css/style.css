@@ -3,7 +3,6 @@
 }
 
 
-body {background-color: teal accent-1;}
 
 
 .text-shadow {
@@ -14,20 +13,20 @@ body {background-color: teal accent-1;}
     line-height: 2;
 }
 
-.nav-wrapper {
-    background-color: teal darken-4;
-}
+
 
 .collapsible-header {
-    background-color: yellow;
+    background-color: teal lighten-3;
 }
 
 .collapsible-body {
-    background-color: lime;
+    background-color: light-blue lighten-3;
 }
 
 .btn-small {
     margin: 10px;
+    margin-right: 10%;
+    font-size: larger;
 }
 
 .collapsible-header .col strong {
@@ -36,15 +35,6 @@ body {background-color: teal accent-1;}
 }
 
 
-
-div.checkbox {
-    background-color: darkorange;
-}
-
-
-#is_hot_product {
-    color: crimson;
-}
 
 
 /* -------- welcome & admin images */
@@ -82,9 +72,10 @@ div.checkbox {
 /* ---------------------- Footer */
 
 footer {
-    background-color: darkorange;
     text-align: center;
     padding: 11px;
+    height:100px;
+    width: 100%;
 }
 
 .social-networks {
@@ -96,7 +87,7 @@ footer {
 }
 
 .social-networks i {
-    font-size: 150%;
+    font-size: 100%;
     text-align: center;
     text-decoration: none;
     padding: 4%;

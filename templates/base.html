@@ -15,10 +15,12 @@
         {% endblock %}
         <title>Care-2-Share</title>
     </head>
-    <body>
+    <body class="background-color: cyan lighten-5">
+
+    
         <header>
             <!-- main navbar -->
-            <nav class="nav-extended text-shadow teal darken-4">
+            <nav class="nav-extended text-shadow cyan darken-4">
                 <div class="nav-wrapper">
                     <a href="{{ url_for('welcome') }}" class="brand-logo">Care-2-Share</a>
                     <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -28,7 +30,6 @@
                         <li><a href="{{ url_for('get_offers') }}">All Offers</a></li>
                         <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
                         <li><a href="{{ url_for('add_offer') }}">New Offers</a></li>
-                        <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
                         <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -42,14 +43,13 @@
             <!-- mobile sidenav -->
             <ul class="sidenav" id="mobile-demo">
                 <li>
-                    <h4 class="center-align green-text text-darken 4">Care-2-Share</h4>
+                    <h4 class="center-align teal-text text-darken 4">Care-2-Share</h4>
                 </li>
                 <li><a href="{{ url_for('welcome') }}">Welcome</a></li>
                 {% if session.username %}
                 <li><a href="{{ url_for('get_offers') }}">All Offers</a></li>
                 <li><a href="{{ url_for('profile', username=session['username']) }}">Profile</a></li>
                 <li><a href="{{ url_for('add_offer') }}">New Offers</a></li>
-                <li><a href="{{ url_for('manage_categories') }}">Manage Categories</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                 {% else %}
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -65,7 +65,7 @@
             {% if messages %}
             {% for message in messages %}
             <div class="row flashes">
-                <h4 class="light-green lighten-4 center-align">{{ message }}</h4>
+                <h4 class="light-blue lighten-3 center-align">{{ message }}</h4>
             </div>
             {% endfor %}
             {% endif %}
