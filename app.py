@@ -169,7 +169,6 @@ def delete_offer(offer_id):
     return redirect(url_for("get_offers"))
 
 
-
 @app.route("/contact_admin")
 def contact_admin():
      # the last page, being contact admin
@@ -196,7 +195,7 @@ def populate_offer(request_form):
 
     return new_offer
 
-    
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
