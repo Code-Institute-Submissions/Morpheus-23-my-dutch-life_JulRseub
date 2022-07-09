@@ -1,11 +1,14 @@
 .brand-logo {
     margin-left: 3%;
-    font-size-adjust: 0.40;
-
+    font-size: 60%;
 }
 
-font-size-adjust: 0.58;
-
+/* https://www.digitalocean.com/community/tutorials/css-prevent-line-break */
+.nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 #contactcards {
     margin: auto;
