@@ -25,18 +25,6 @@ def welcome():
     return render_template("welcome.html")
 
 
-# @app.route("/get_offers")
-# def get_offers():
-#     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
-
-#     selected_categories = request.args.get('selected_categories', 'all')
-#     print("selected_categories=" + selected_categories)
-
-#     categories = list(mongo.db.categories.find())
-
-#     offers = list(mongo.db.offers.find())
-#     return render_template("offers.html", offers=offers, categories=categories)
-
 @app.route("/get_offers")
 def get_offers():
     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
@@ -166,6 +154,9 @@ def add_offer():
 
 @app.route("/edit_offer/<offer_id>", methods=["GET", "POST"])
 def edit_offer(offer_id):
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+
     if request.method == "POST":
         is_hot_product = "on" if request.form.get(
             "is_hot_product") else "off"
@@ -176,7 +167,7 @@ def edit_offer(offer_id):
         collection_time_end = request.form.get("offer_collection_expiry_time")
         collection_start = collection_date_start + " " + collection_time_start
         collection_end = collection_date_start + " " + collection_time_end
-        submit = {
+        updated_offer = {
             "category_name": request.form.get("category_name"),
             "name": request.form.get("offer_name"),
             "description": request.form.get("offer_description"),
@@ -187,19 +178,31 @@ def edit_offer(offer_id):
             "is_hot_product": is_hot_product,
             "is_frozen_product": is_frozen_product,
         }
-        mongo.db.offers.update({"_id": ObjectId(offer_id)}, submit)
+
+        # https://stackoverflow.com/questions/69950552/mongodb-update-i-cant-update-my-documents-in-mongodb-with-flask-api
+        offer = {"_id": ObjectId(offer_id)}
+        mongo.db.offers.replace_one(offer, updated_offer, True)
+
         flash("Great, your offer has been successfully updated")
+        offers = list(mongo.db.offers.find())
+        return render_template("offers.html", offers=offers, categories=categories)
 
     offer = mongo.db.offers.find_one({"_id": ObjectId(offer_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_offer.html", offer=offer, categories=categories)
 
 
 @app.route("/delete_offer/<offer_id>")
 def delete_offer(offer_id):
-    mongo.db.offers.remove({"_id": ObjectId(offer_id)})
-    flash("Offer successfully deleted")
+    # https://www.youtube.com/watch?v=dQ2niRl2Lek
+
+    try:
+        mongo.db.offers.delete_one({"_id": ObjectId(offer_id)})
+        flash("Offer successfully deleted")
+    except Exception:
+        flash("Could not delete offer")
+
     return redirect(url_for("get_offers"))
+
 
 
 @app.route("/contact_admin")
