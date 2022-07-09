@@ -1,13 +1,13 @@
 
 
-# Sharing-is-Caring
+# Care-2-Share
 
-[Sharing-is-Caring](https://morpheus-23.github.io/__________) website is representative of the community where I live. On my walks through our neighbourhood I have often come accross casual displays of generosity. It is not strange to find a table on the front lawn of a property, displaying fruits, vegetables, eggs, plant seedlings, honey, home made jams, second hand books, childrens' toys. The offerings vary. Sometimes just a few products, sometimes a lot.  There would be a sign that says help yourself, sometimes it may indicate you can take what you need and leave a small fee if you wish. Even though the random offerings are quite wonderful to come accross, not all streets are busy, the weather can ruin a splendid gesture... and off course the birds may get into the fruits...
+[Care-2-Share](https://flask-dutch-life-project.herokuapp.com/welcome) website is representative of the community where I live. On my walks through our neighbourhood I have often come accross casual displays of generosity. It is not strange to find a table on the front lawn of a property, displaying fruits, vegetables, eggs, plant seedlings, honey, home made jams, second hand books, childrens' toys. The offerings vary. Sometimes just a few products, sometimes a lot.  There would be a sign that says help yourself, sometimes it may indicate you can take what you need and leave a small fee if you wish. Even though the random offerings are quite wonderful to come accross, not all streets are busy, the weather can ruin a splendid gesture... and off course the birds may get into the fruits...
 I have seen people make random posts on social media inviting strangers to contact them if they feel alone and would like to join for a family dinner. In winter I have often seen posts about soups being made, to share.  I have seen a couple invite strangers to make use of their large garden for picnics or barbeques.  
 I have been in this country for three years and admit that even though the pandemic basically halted the sense of community for about two years, people seem eager to once again engage with their fellow human beings. It is not just about the people being approachable, my new countrymen and women do not like letting anything go to waste. I have read that the Netherlands is a circular economy (in process off course), but it is very apparent from my perspective.  Wearing previously loved clothes is fashionable.  Bicycles are being passed on (and I am not referring to the ones being taken without permission....).  
 Developing this website brought me great joy and I would love to get it ready to share with the community.  I would definitely be an active participant.  I have made my share of petfood donations (my cats insist they want a varied diet, and once I buy enough to last a while they change their minds and we end up with tins, pouches and bags of catfood that I know could be well enjoyed by other, less fussy felines in our neighbourhood).
 In my opinion I now live in a community that can appreciate diversity and enjoy some of the simple joys life can offer, like sharing rather than letting those extra eggs or apples go to waste.
-This website is a tool that the community can use to ensure those products are shared, before the "best before" time runs out. (even then it may still not go to the waste bin !)  Sharing-is-Caring can enable like minded people to connect and as a result this website came to fruition...yes enjoy the pun. 
+This website is a tool that the community can use to ensure those products are shared, before the "best before" time runs out. (even then it may still not go to the waste bin !)  Care-2-Share can enable like minded people to connect and as a result this website came to fruition, yes sharing is caring. 
 The site enables members from the community to register as an online member, browse what is on offer, add their own offerings to the list, amend and delete their offers when required. When new members sign up, they need to provide their postal code to confirm they are from the area.  It is not a security layer but more an informal manner for keeping it within the community. At this stage this is still a manual check being attended to by the site owner, with the intention to change the code to only allow new members to sign up should their postal codes correspond with specific parameters (for the area).  Visitors may also contact the admin (site owner) by sending an email.  
 
 For the community the value of the site is an easy to use platform to do what they have been doing, for the site owner it is pure enjoyment of finding the like minded sharing and caring attitude of other community members aiming to not let any peasoup or "oliebollen" go to waste.
@@ -31,7 +31,7 @@ The website is not area specific and can very easily be adapted / applied for ot
     - to be able to register as a member of the community and as a result be able to access more functions on the site such as posting/editing/deleting my own offerings
     - to be able to post my own offerings with ease of use
     - to change / amend any of my offerings with ease of use
-    - to delete my expired offerings with ease of use
+    - to delete my offerings with ease of use
     - to be able to access the site from different devices, thus the site must be responsive
     - to be able to communicate with the site owner, should I have suggestions, queries, concerns or maybe even a compliment
 
@@ -51,13 +51,12 @@ The website is not area specific and can very easily be adapted / applied for ot
     - promote / further the sharing and caring attitude of the community by bringing them together and enabling them to "find" one another in a easy to navigate and safe environment
     - as a minimum requirement, require a postal code when new members register to try and keep this initiative within the intended community, to also keep it practical from a distance perspective when offering/collecting/getting together etc.
     - keep the site relevant and simple to use, thus ensuring the site stays fresh and relevant, I need to be able to delete any expired offers(if not removed by the members), delete complete inactive members(which may have relocated....?)
-    - easily create new categories, if a need arises (as may be requested by a community member (from the onsite email facility)
+    - easily create new categories, if a need arises (as may be requested by a community member (if request/s received via email)
     -  be able to store as much data as needed to be able to host the offerings from the community 
     -  ensure that the site is accessible from all device sizes
     -  ensure that members are not able to access the profile of other members and only be able to access, add, delete, amended offerings created from their own profiles
-    -  delete / block any members that disregard the rules of the site;
     -  host a friendly community site easy to use by young and old
-    -   be able to receive communication / feedback / requests from the community via the online email option provided, to (as far as possible and applicable) keep the site reflective of the community and its members
+    -  be able to receive communication / feedback / requests from the community via the contact details provided (as far as possible and applicable) keep the site reflective of the community and its members
 
 
 ### Strategy

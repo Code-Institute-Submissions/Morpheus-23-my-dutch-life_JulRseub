@@ -1,6 +1,11 @@
 .brand-logo {
-    margin-left: 5%;
+    margin-left: 3%;
+    font-size-adjust: 0.40;
+
 }
+
+font-size-adjust: 0.58;
+
 
 #contactcards {
     margin: auto;
