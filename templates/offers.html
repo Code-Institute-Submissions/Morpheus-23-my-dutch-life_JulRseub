@@ -23,7 +23,7 @@
             <i class="fas fa-caret-down" data-position="left"></i>
 
             <div class="col s9">
-                <strong>{{ offer.name }}</strong> : {{ offer.collection_date_start }}
+                <strong>{{ offer.name }}</strong> : {{ offer.collection_start_date }} {{ offer.collection_start_time }}
                 {% if offer.is_hot_product == "on" %}
                 <i class="fa-solid fa-fire black-text text-lighten-4 tooltipped" data-position="right"
                     data-tooltip="Hot Product!"></i>
@@ -49,8 +49,8 @@
             <p>What is on offer: {{ offer.description }}</p>
             <p>Offered by: {{ offer.offered_by }}</p>
             <p>Where to find it: {{ offer.collection_point }}</p>
-            <p>When to collect it: {{ offer.collection_date_start }}</p>
-            <p>This offer expires: {{ offer.collection_date_end }}</p>
+            <p>When to collect it: {{ offer.collection_start_date }} {{ offer.collection_start_time }}</p>
+            <p>This offer expires: {{ offer.collection_start_date }} {{ offer.collection_end_time }}</p>
         </div>
     </li>
     {% endfor %}

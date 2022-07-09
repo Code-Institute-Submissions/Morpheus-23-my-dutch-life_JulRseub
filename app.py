@@ -124,26 +124,9 @@ def logout():
 @app.route("/add_offer", methods=["GET", "POST"])
 def add_offer():
     if request.method == "POST":
-        is_hot_product = "on" if request.form.get(
-            "is_hot_product") else "off"
-        is_frozen_product = "on" if request.form.get(
-            "is_frozen_product") else "off"
-        collection_date_start = request.form.get("offer_collection_date")
-        collection_time_start = request.form.get("offer_collection_start_time")
-        collection_time_end = request.form.get("offer_collection_expiry_time")
-        collection_start = collection_date_start + " " + collection_time_start
-        collection_end = collection_date_start + " " + collection_time_end
-        offer = {
-            "category_name": request.form.get("category_name"),
-            "name": request.form.get("offer_name"),
-            "description": request.form.get("offer_description"),
-            "offered_by": session["username"],
-            "collection_date_start": collection_start,
-            "collection_date_end": collection_end,
-            "collection_point": request.form.get("offer_collection_point"),
-            "is_hot_product": is_hot_product,
-            "is_frozen_product": is_frozen_product,
-        }
+
+        offer = populate_offer(request.form)
+
         mongo.db.offers.insert_one(offer)
         flash("Thank you, your offer has been successfully added")
         return redirect(url_for("get_offers"))
@@ -158,26 +141,8 @@ def edit_offer(offer_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
 
     if request.method == "POST":
-        is_hot_product = "on" if request.form.get(
-            "is_hot_product") else "off"
-        is_frozen_product = "on" if request.form.get(
-            "is_frozen_product") else "off"
-        collection_date_start = request.form.get("offer_collection_date")
-        collection_time_start = request.form.get("offer_collection_start_time")
-        collection_time_end = request.form.get("offer_collection_expiry_time")
-        collection_start = collection_date_start + " " + collection_time_start
-        collection_end = collection_date_start + " " + collection_time_end
-        updated_offer = {
-            "category_name": request.form.get("category_name"),
-            "name": request.form.get("offer_name"),
-            "description": request.form.get("offer_description"),
-            "offered_by": session["username"],
-            "collection_date_start": collection_start,
-            "collection_date_end": collection_end,
-            "collection_point": request.form.get("offer_collection_point"),
-            "is_hot_product": is_hot_product,
-            "is_frozen_product": is_frozen_product,
-        }
+
+        updated_offer = populate_offer(request.form)
 
         # https://stackoverflow.com/questions/69950552/mongodb-update-i-cant-update-my-documents-in-mongodb-with-flask-api
         offer = {"_id": ObjectId(offer_id)}
@@ -210,7 +175,28 @@ def contact_admin():
      # the last page, being contact admin
     return render_template("contact_admin.html")
 
+def populate_offer(request_form):
+    is_hot_product = "on" if request_form.get(
+        "is_hot_product") else "off"
+    is_frozen_product = "on" if request_form.get(
+        "is_frozen_product") else "off"
 
+    new_offer = {
+        "category_name": request_form.get("category_name"),
+        "name": request_form.get("offer_name"),
+        "description": request_form.get("offer_description"),
+        "offered_by": session["username"],
+        "collection_start_date": request_form.get("offer_collection_date"),
+        "collection_start_time": request_form.get("offer_collection_start_time"),
+        "collection_end_time": request_form.get("offer_collection_expiry_time"),
+        "collection_point": request_form.get("offer_collection_point"),
+        "is_hot_product": is_hot_product,
+        "is_frozen_product": is_frozen_product
+    }
+
+    return new_offer
+
+    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

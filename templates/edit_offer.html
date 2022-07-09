@@ -58,7 +58,7 @@
             <div class="input-field col s12">
                 <i class="fa-solid fa-calendar-check prefix black-text"></i>
                 <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text"
-                    class="datepicker validate" value="{{ offer.collection_date_start }}" required>
+                    class="datepicker validate" value="{{ offer.collection_start_date }}" required>
                 <label for="offer_collection_date">Offer Collection Date</label>
             </div>
         </div>
@@ -67,7 +67,7 @@
             <div class="input-field col s12">
                 <i class="fa-solid fa-clock prefix black-text"></i>
                 <input id="offer_collection_start_time" name="offer_collection_start_time" type="text"
-                    class="timepicker validate" value="{{ offer.collection_date_start }}" required>
+                    class="timepicker validate" value="{{ offer.collection_start_time }}" required>
                 <label for="offer_collection_start_time">Offer Collection Start Time</label>
             </div>
         </div>
@@ -76,7 +76,7 @@
             <div class="input-field col s12">
                 <i class="fa-solid fa-hourglass-end prefix black-text"></i>
                 <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text"
-                    class="timepicker validate" value="{{ offer.collection_date_end }}" required>
+                    class="timepicker validate" value="{{ offer.collection_end_time }}" required>
                 <label for="offer_collection_expiry_time">Offer Collection Expiry Time</label>
             </div>
         </div>
