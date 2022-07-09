@@ -19,7 +19,7 @@
                     {% endif %}
                     {% endfor %}
                 </select>
-                <label for="category_name">Offer Category</label>
+                <label class="light-blue-text text-lighten-3" for="category_name">Offer Category</label>
             </div>
         </div>
         <!-- offer name -->
@@ -28,7 +28,7 @@
                 <i class="fa-solid fa-hand-holding-heart prefix black-text"></i>
                 <input id="offer_name" name="offer_name" minlength="4" maxlength="50" type="text" class="validate"
                     value="{{ offer.name }}" required>
-                <label for="offer_name">Offer Name</label>
+                <label class="light-blue-text text-lighten-3" for="offer_name">Offer Name</label>
             </div>
         </div>
         <!-- offer description -->
@@ -39,7 +39,7 @@
                     class="materialize-textarea validate" required>
                     {{- offer.description -}}
                 </textarea>
-                <label for="offer_description">Offer Description</label>
+                <label class="light-blue-text text-lighten-3" for="offer_description">Offer Description</label>
             </div>
         </div>
         <!-- offer collection point -->
@@ -50,7 +50,7 @@
                     class="materialize-textarea validate" required>
                     {{- offer.collection_point -}}
                 </textarea>
-                <label for="offer_collection_point">Offer collection address</label>
+                <label class="light-blue-text text-lighten-3" for="offer_collection_point">Offer collection address</label>
             </div>
         </div>
         <!-- offer collection date -->
@@ -59,7 +59,7 @@
                 <i class="fa-solid fa-calendar-check prefix black-text"></i>
                 <input id="offer_collection_date" name="offer_collection_date" format="yyyy-mm-dd" type="text"
                     class="datepicker validate" value="{{ offer.collection_start_date }}" required>
-                <label for="offer_collection_date">Offer Collection Date</label>
+                <label class="light-blue-text text-lighten-3" for="offer_collection_date">Offer Collection Date</label>
             </div>
         </div>
         <!-- offer collection start time -->
@@ -68,7 +68,7 @@
                 <i class="fa-solid fa-clock prefix black-text"></i>
                 <input id="offer_collection_start_time" name="offer_collection_start_time" type="text"
                     class="timepicker validate" value="{{ offer.collection_start_time }}" required>
-                <label for="offer_collection_start_time">Offer Collection Start Time</label>
+                <label class="light-blue-text text-lighten-3" for="offer_collection_start_time">Offer Collection Start Time</label>
             </div>
         </div>
         <!-- offer collection expiry time -->
@@ -77,7 +77,7 @@
                 <i class="fa-solid fa-hourglass-end prefix black-text"></i>
                 <input id="offer_collection_expiry_time" name="offer_collection_expiry_time" type="text"
                     class="timepicker validate" value="{{ offer.collection_end_time }}" required>
-                <label for="offer_collection_expiry_time">Offer Collection Expiry Time</label>
+                <label class="light-blue-text text-lighten-3" for="offer_collection_expiry_time">Offer Collection Expiry Time</label>
             </div>
         </div>
         <!-- hot product button -->

@@ -12,7 +12,7 @@
                     <i class="fa-solid fa-user prefix light-blue-text text-lighten-3"></i>
                     <input id="username" name="username" type="text" class="validate" minlength="4" maxlength="25"
                         pattern="^[a-zA-Z0-9]{5,15}$" required>
-                    <label for="username">Username</label>
+                    <label class="light-blue-text text-lighten-3" for="username">Username</label>
                 </div>
             </div>
             <!-- firstname -->
@@ -21,7 +21,7 @@
                     <i class="fa-solid fa-id-card prefix light-blue-text text-lighten-3"></i>
                     <input id="firstname" name="firstname" type="text" class="validate" minlength="2" maxlength="100"
                         pattern="^[a-zA-Z0-9]{2,100}$" required>
-                    <label for="firstname">Firstname</label>
+                    <label class="light-blue-text text-lighten-3" for="firstname">Firstname</label>
                 </div>
             </div>
             <!-- surname -->
@@ -30,7 +30,7 @@
                     <i class="fa-solid fa-id-card prefix light-blue-text text-lighten-3"></i>
                     <input id="surname" name="surname" type="text" class="validate" minlength="2" maxlength="100"
                         pattern="^[a-zA-Z0-9]{2,100}$" required>
-                    <label for="surname">Surname</label>
+                    <label class="light-blue-text text-lighten-3" for="surname">Surname</label>
                 </div>
             </div>
             <!-- postal_code -->
@@ -39,7 +39,7 @@
                     <i class="fa-solid fa-envelopes-bulk prefix light-blue-text text-lighten-3"></i>
                     <input id="postal_code" name="postal_code" type="text" class="validate" minlength="6" maxlength="6"
                         pattern="^[0-9A-Z]{6,6}$" required>
-                    <label for="postal_code">Postal Code</label>
+                    <label class="light-blue-text text-lighten-3" for="postal_code">Postal Code</label>
                 </div>
             </div>
             <!-- password -->
@@ -48,22 +48,24 @@
                     <i class="fa-solid fa-user-secret prefix light-blue-text text-lighten-3"></i>
                     <input id="password" name="password" type="password" class="validate" minlength="5" maxlength="100"
                         pattern="^[a-zA-Z0-9]{5,100}$" required>
-                    <label for="password">Password</label>
+                    <label class="light-blue-text text-lighten-3" for="password">Password</label>
                 </div>
             </div>
             <!-- rulescheck -->
-            <div class="row">
-                <div class="input-field col s12">
-                    <label for="ruleschecked">
-                        <i class="light-green-text text-darken-4"></i>
-                        <input id="ruleschecked" name="ruleschecked" type="checkbox" required />
-                        <span>I have read and agree to follow the site rules and guidelines below</span><br><br>
-                    </label>
+
+            <div class="nowrap">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <label for="ruleschecked">
+                            <i class="light-green-text text-darken-4"></i>
+                            <input id="ruleschecked" name="ruleschecked" type="checkbox" required />
+                            <span>I have read and agree to follow the site rules and guidelines below</span><br><br>
+                        </label>
+                    </div>
                 </div>
             </div>
-            <div>
 
-            </div>
+
             <!-- register -->
             <div class="row">
                 <button type="submit" class="col s12 btn-large cyan darken-4 text-shadow">
