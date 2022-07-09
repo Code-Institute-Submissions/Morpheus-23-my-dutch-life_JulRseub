@@ -1,10 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h4 class="center-align white-text text-shadow background-color: light-blue darken-3">Register to become a member <i class="fa-solid fa-unlock-keyhole"></i> </h4>
-
-
-
+<h4 class="center-align white-text text-shadow background-color: light-blue darken-3">Register to become a member <i
+        class="fa-solid fa-unlock-keyhole"></i> </h4>
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
         <div class="card-panel ">
@@ -40,7 +38,7 @@
                 <div class="input-field col s12">
                     <i class="fa-solid fa-envelopes-bulk prefix light-blue-text text-lighten-3"></i>
                     <input id="postal_code" name="postal_code" type="text" class="validate" minlength="6" maxlength="6"
-                    pattern="^[0-9A-Z]{6,6}$" required>
+                        pattern="^[0-9A-Z]{6,6}$" required>
                     <label for="postal_code">Postal Code</label>
                 </div>
             </div>
@@ -78,38 +76,44 @@
 <div class="row">
     <div class="section">
         <h5>Website Disclaimer:</h5>
-        <p>The information provided on this site is intended solely for the personal non-commercial use of the
+        <p>The information provided on this site is intended solely for the personal non-commercial use of
+            the
             user/member, who accepts full responsibility for its use.
-            The site owner and/or administrator assumes no responsibility or liability for any errors or omisions on
-            this site. The information contained herein is provided on an "as is" basis with no guarantees or assurances
-            of completeness, accuracy, usefulness or timelines and without any warranties of any kind whatsoever,
+            The site owner and/or administrator assumes no responsibility or liability for any errors or
+            omisions on
+            this site. The information contained herein is provided on an "as is" basis with no guarantees
+            or assurances
+            of completeness, accuracy, usefulness or timelines and without any warranties of any kind
+            whatsoever,
             express or implied.</p>
-            <br>
-            <h5>Rules and guidelines to consider as a member of this community website:</h5>
-            <p>
-                <ol>
-                    <li>
-                        All offers presented on this site will be offered free from remuniration;
-                    </li>
-                    <li>
-                        No trading and/or selling of services and/or products will be allowed;
-                    </li>
-                    <li>
-                        No animals and/or live stock will be offered on this site;
-                    </li>
-                    <li>
-                        No abusive language and/or bullying will be tolerated;
-                    </li>
-                    <li>
-                        No content of any sexual nature will be allowed;
-                    </li>
-                </ol>
-                <ul>
-                    By becoming a member and user of this site, acceptance to abide by the rules and guidelines are personally confirmed.
-                    Failure to follow the rules and guidelines herein will cause the immediate removal of the user/member
-                    from the site.
-                </ul>
-            </p>
+        <br>
+        <h5>Rules and guidelines to consider as a member of this community website:</h5>
+        <p>
+            <ol>
+                <li>
+                    All offers presented on this site will be offered free from remuniration;
+                </li>
+                <li>
+                    No trading and/or selling of services and/or products will be allowed;
+                </li>
+                <li>
+                    No animals and/or live stock will be offered on this site;
+                </li>
+                <li>
+                    No abusive language and/or bullying will be tolerated;
+                </li>
+                <li>
+                    No content of any sexual nature will be allowed;
+                </li>
+            </ol>
+            <ul>
+                By becoming a member and user of this site, acceptance to abide by the rules and guidelines
+                are personally confirmed.
+                Failure to follow the rules and guidelines herein will cause the immediate removal of the
+                user/member
+                from the site.
+            </ul>
+        </p>
     </div>
 </div>
 

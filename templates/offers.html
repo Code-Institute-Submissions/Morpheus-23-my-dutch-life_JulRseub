@@ -8,7 +8,7 @@
     <select id="selected_categories" name="selected_categories" multiple>
         <option value="" disabled selected>Filter by categories</option>
         {% for category in categories %}
-            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
         {% endfor %}
     </select>
     <input type="submit" value="Apply filter" class="btn-small red accent-1">
@@ -43,7 +43,7 @@
                 {% endif %}
             </div>
         </div>
-      
+
         <div class="collapsible-body">
             <strong>{{ offer.category_name }}</strong>
             <p>What is on offer: {{ offer.description }}</p>
