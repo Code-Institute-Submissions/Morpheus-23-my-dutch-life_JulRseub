@@ -25,18 +25,35 @@ def welcome():
     return render_template("welcome.html")
 
 
+# @app.route("/get_offers")
+# def get_offers():
+#     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
+
+#     selected_categories = request.args.get('selected_categories', 'all')
+#     print("selected_categories=" + selected_categories)
+
+#     categories = list(mongo.db.categories.find())
+
+#     offers = list(mongo.db.offers.find())
+#     return render_template("offers.html", offers=offers, categories=categories)
+
 @app.route("/get_offers")
 def get_offers():
     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
 
-    selected_categories = request.args.get('selected_categories', 'all')
-    print("selected_categories=" + selected_categories)
+    selected_categories = request.args.getlist('selected_categories')
 
+    # populate dropdown
     categories = list(mongo.db.categories.find())
+    # TODO: figure out how to mark the categories as selected after filtering
 
-    offers = list(mongo.db.offers.find())
+    # https://www.freecodecamp.org/news/python-list-length-how-to-get-the-size-of-a-list-in-python/
+    if len(selected_categories) == 0:
+        offers = list(mongo.db.offers.find())
+    else:
+        offers = list(mongo.db.offers.find( { "category_name": { "$in": selected_categories} } ))
+
     return render_template("offers.html", offers=offers, categories=categories)
-
 
 @app.route("/manage_categories", methods=["GET", "POST"])
 def manage_categories():
