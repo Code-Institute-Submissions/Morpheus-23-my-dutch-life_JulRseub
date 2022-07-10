@@ -1,10 +1,11 @@
 import os
 from flask import (
-    Flask, flash, render_template, 
+    Flask, flash, render_template,
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+
 if os.path.exists("env.py"):
     import env
 
@@ -30,7 +31,8 @@ def register():
     if request.method == "POST":
         # check if member exists in database
         existing_member = mongo.db.members.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()}
+        )
 
         if existing_member:
             flash("Member name already exists")
@@ -59,16 +61,17 @@ def login():
     if request.method == "POST":
         # check if username exists in database
         existing_member = mongo.db.members.find_one(
-            {"username": request.form.get("username").lower()})
+            {"username": request.form.get("username").lower()}
+        )
 
         if existing_member:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_member["password"], request.form.get("password")):
+                existing_member["password"], request.form.get("password")
+            ):
                 session["username"] = request.form.get("username").lower()
                 flash("Welcome {}".format(request.form.get("username")))
-                return redirect(url_for(
-                    "profile", username=session["username"]))
+                return redirect(url_for("profile", username=session["username"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -166,9 +169,9 @@ def delete_offer(offer_id):
 def get_offers():
     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
 
-    selected_categories = request.args.getlist('selected_categories')
+    selected_categories = request.args.getlist("selected_categories")
     my_offers = "checked" if request.args.get("my_offers") else ""
- 
+
     filters = {
         "selected_categories": selected_categories,
         "my_offers": my_offers
@@ -176,34 +179,40 @@ def get_offers():
 
     # populate dropdown
     categories = list(mongo.db.categories.find())
+    # TODO: figure out how to mark the categories as selected after filtering
 
     filter_criteria = ""
 
     # https://www.freecodecamp.org/news/python-list-length-how-to-get-the-size-of-a-list-in-python/
     # https://stackoverflow.com/questions/23577172/mongodb-pymongo-querying-multiple-criteria-unexpected-results
     if len(selected_categories) > 0 and my_offers == "":
-        filter_criteria = { "category_name": { "$in": selected_categories} }
+        filter_criteria = {"category_name": {"$in": selected_categories}}
     elif len(selected_categories) == 0 and my_offers == "checked":
-        filter_criteria = { "offered_by": { "$eq": session["username"]} }
+        filter_criteria = {"offered_by": {"$eq": session["username"]}}
     elif len(selected_categories) > 0 and my_offers == "checked":
-        filter_criteria = { "$and": [{ "category_name": { "$in": selected_categories} }, { "offered_by": { "$eq": session["username"]} }] }
-    
+        filter_criteria = {
+            "$and": [
+                {"category_name": {"$in": selected_categories}},
+                {"offered_by": {"$eq": session["username"]}},
+            ]
+        }
+
     offers = list(mongo.db.offers.find(filter_criteria))
 
-    return render_template("offers.html", offers=offers, categories=categories, filters=filters)
+    return render_template(
+        "offers.html", offers=offers, categories=categories, filters=filters
+    )
 
 
 @app.route("/contact_admin")
 def contact_admin():
-# the last page, being contact admin
+    # the last page, being contact admin
     return render_template("contact_admin.html")
 
 
 def populate_offer(request_form):
-    is_hot_product = "on" if request_form.get(
-        "is_hot_product") else "off"
-    is_frozen_product = "on" if request_form.get(
-        "is_frozen_product") else "off"
+    is_hot_product = "on" if request_form.get("is_hot_product") else "off"
+    is_frozen_product = "on" if request_form.get("is_frozen_product") else "off"
 
     new_offer = {
         "category_name": request_form.get("category_name"),

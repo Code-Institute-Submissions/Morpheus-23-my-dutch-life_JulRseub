@@ -253,24 +253,7 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
 ## Testing
 
-### Layout
-
-* Page title remains constant for all pages
-* Logo location always remains constant
-* Navigation bar location always remains constant
-* Footer remains pinned to bottom of browser window
-* Content pages header location remains constant on each page
-
-### Navigation
-
-* Clicking the logo navigates to landing page in the same tab
-* Clicking the navigation menu items navigates to the correct site page in the same tab
-* Clicking the social media links navigate to the correct external social media site in a new tab
-
-### Form
-
-* Input form validates required input fields and guides the user correctly to remedy the problem
-* Submit button submits to the CI backend and displays information in a new tab
+The testing section is in a seperate file: [Testing](testing.md)
 
 ### UX
 
