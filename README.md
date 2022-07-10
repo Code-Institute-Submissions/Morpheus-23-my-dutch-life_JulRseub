@@ -411,36 +411,28 @@ Deployment
 
 steps
 
-Technologies Used
-
-
+## Technologies Used
 
 Languages
 - HTML5
 - CSS3
 - Javascript
-- Python3
+- Python
 
-Front end - 
-font awesome
-materialze
-html
-css 
-javascrpit
-jquery
+Frameworks, libraries and others
 
-backend
-python
-Flask - micro framework for building applications
-FlaskPyMongo - 
-Werkzeug - a library framework
-MongoDB - hosting the database in a cloud environment
-
-Gitpod - developing the site
-Github - version control and hosting the repository
-Heroku - deploy the live site
-
-https://randomkeygen.com/
+-   Flask - micro framework for building applications
+-   FlaskPyMongo - provides MongoDB support for Flask applications
+-   Werkzeug - a library framework (https://werkzeug.palletsprojects.com/)
+-   MongoDB - hosting the database in a cloud environment (https://www.mongodb.com/)
+-   Gitpod - developing the site (https://www.gitpod.io/)
+-   Github - version control and hosting the repository (https://github.com/)
+-   Heroku - deploy the live site (https://dashboard.heroku.com/apps)
+-   Pip - package installer for Python
+-   dnspython - a toolkit for Python
+-   jQuery (https://releases.jquery.com/)
+-   Jinja (https://jinja.palletsprojects.com/en/3.0.x/templates/#)
+-   RandomKeyGen (https://randomkeygen.com/)
 
 
 ## Unimplemented assessment criteria
@@ -449,6 +441,7 @@ https://randomkeygen.com/
 * Better defensive programming can be applied.
 * Features for the site administrator can be developed so that new categories can be created by the administrator on the website and not just from MongoDB.
 * Better wireframes could be done by making use of Balsamic, to replace the hand drawn wireframes.
+* A more complete description of technologies used with their relevant links
 
 
 ## Content
