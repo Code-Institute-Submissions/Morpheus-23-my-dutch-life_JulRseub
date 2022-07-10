@@ -125,19 +125,19 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
         - Welcome
 
-            ![Welcome](./readme/wireframe-welcome-desktop.png)
+            ![Welcome](./readme/wf-welcome.jpg)
 
         - LogIn
 
-            ![LogIn](./readme/wireframe-login-desktop.png)
+            ![LogIn](./readme/wf-login.jpg)
 
         - Register
 
-            ![Register](./readme/wireframe-register-desktop.png)
+            ![Register](./readme/wf-register.jpg)
 
         - Contact Admin
 
-            ![ContactAdmin](./readme/wireframe-contact-admin-desktop.png)
+            ![ContactAdmin](./readme/wf-contactadmin.jpg)
             
         - All Offers
 
