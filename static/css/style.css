@@ -39,7 +39,7 @@
 .btn-small {
     margin: 10px;
     margin-right: 10%;
-    font-size: larger;
+    font-size-adjust: inherit;
 }
 
 #buttonright.btn-small {
