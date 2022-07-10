@@ -24,26 +24,6 @@ def welcome():
 # the landing page providing info about site
     return render_template("welcome.html")
 
-
-@app.route("/get_offers")
-def get_offers():
-    # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
-
-    selected_categories = request.args.getlist('selected_categories')
-
-    # populate dropdown
-    categories = list(mongo.db.categories.find())
-    # TODO: figure out how to mark the categories as selected after filtering
-
-    # https://www.freecodecamp.org/news/python-list-length-how-to-get-the-size-of-a-list-in-python/
-    if len(selected_categories) == 0:
-        offers = list(mongo.db.offers.find())
-    else:
-        offers = list(mongo.db.offers.find( { "category_name": { "$in": selected_categories} } ))
-
-    return render_template("offers.html", offers=offers, categories=categories)
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -120,7 +100,6 @@ def logout():
     session.pop("username")
     return redirect(url_for("login"))
 
-
 @app.route("/add_offer", methods=["GET", "POST"])
 def add_offer():
     if request.method == "POST":
@@ -167,6 +146,37 @@ def delete_offer(offer_id):
         flash("Could not delete offer")
 
     return redirect(url_for("get_offers"))
+
+@app.route("/get_offers")
+def get_offers():
+    # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
+
+    selected_categories = request.args.getlist('selected_categories')
+    my_offers = "checked" if request.args.get("my_offers") else ""
+ 
+    filters = {
+        "selected_categories": selected_categories,
+        "my_offers": my_offers
+    }
+
+    # populate dropdown
+    categories = list(mongo.db.categories.find())
+    # TODO: figure out how to mark the categories as selected after filtering
+
+    filter_criteria = ""
+
+    # https://www.freecodecamp.org/news/python-list-length-how-to-get-the-size-of-a-list-in-python/
+    # https://stackoverflow.com/questions/23577172/mongodb-pymongo-querying-multiple-criteria-unexpected-results
+    if len(selected_categories) > 0 and my_offers == "":
+        filter_criteria = { "category_name": { "$in": selected_categories} }
+    elif len(selected_categories) == 0 and my_offers == "checked":
+        filter_criteria = { "offered_by": { "$eq": session["username"]} }
+    elif len(selected_categories) > 0 and my_offers == "checked":
+        filter_criteria = { "$and": [{ "category_name": { "$in": selected_categories} }, { "offered_by": { "$eq": session["username"]} }] }
+    
+    offers = list(mongo.db.offers.find( filter_criteria ))
+
+    return render_template("offers.html", offers=offers, categories=categories, filters=filters)
 
 
 @app.route("/contact_admin")
