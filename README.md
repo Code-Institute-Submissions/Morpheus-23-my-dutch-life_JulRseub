@@ -233,53 +233,63 @@ Colours, typography, design elements, images, effects to be discussed.
 
             ![ContactPage](./readme/ss-contact-admin-desktop.png)
 
-    - For tablet:
+       - Desktop:
 
-        - Home page
+        - Welcome
 
-            ![HomePage](./readme/ss-home-tablet.png)
-
-        - Register Page
-
-            ![RegisterPage](./readme/ss-register-tablet.png)
+            ![Welcome](./readme/ss-welcome-desktop.png)
 
         - LogIn
 
-            ![LogIn](./readme/ss-login-tablet.png)
+            ![LogIn](./readme/ss-login-desktop.png)
 
-        - Profile
+        - Register
 
-            ![Profile](./readme/ss-profile-tablet.png)
-
-        - New Offers
-
-            ![AddOffer](./readme/ss-add-offer-tablet.png)
-
-        - Log Out
-
-            ![LogOut](./readme/ss-logout-tablet.png)
-
-        - Manage Categories
-
-            ![ManageCategories](./readme/ss-manage-categories-tablet.png)
+            ![Register](./readme/ss-register-desktop.png)
 
         - Contact Admin
 
-            ![ContactPage](./readme/ss-contact-admin-tablet.png)
+            ![ContactAdmin](./readme/ss-contact-admin-desktop.png)
+            
+        - All Offers
 
-    - For mobile:
+            ![AllOffers](./readme/ss-all-offers-desktop.png)
 
-        - Home page
+        - Profile
 
-            ![HomePage](./readme/ss-home-mobile.png)
+            ![Profile](./readme/wireframe-ss-desktop.png)
 
-        - Register Page
+        - New Offers
 
-            ![RegisterPage](./readme/ss-register-mobile.png)
+            ![AddOffer](./readme/ss-add-offer-desktop.png)
+
+        - Log Out
+
+            ![LogOut](./readme/ss-logout-desktop.png)
+
+
+    - Mobile:
+
+       
+        - Welcome
+
+            ![Welcome](./readme/ss-welcome-mobile.png)
 
         - LogIn
 
             ![LogIn](./readme/ss-login-mobile.png)
+
+        - Register
+
+            ![Register](./readme/ss-register-mobile.png)
+
+        - Contact Admin
+
+            ![ContactAdmin](./readme/ss-contact-admin-mobile.png)
+            
+        - All Offers
+
+            ![AllOffers](./readme/ss-all-offers-mobile.png)
 
         - Profile
 
@@ -292,14 +302,6 @@ Colours, typography, design elements, images, effects to be discussed.
         - Log Out
 
             ![LogOut](./readme/ss-logout-mobile.png)
-
-        - Manage Categories
-
-            ![ManageCategories](./readme/ss-manage-categories-mobile.png)
-
-        - Contact Admin
-
-            ![ContactPage](./readme/ss-contact-admin-mobile.png)
 
 
 
