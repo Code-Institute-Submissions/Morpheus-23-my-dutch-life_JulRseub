@@ -121,7 +121,7 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
 - Considering the strategy, scope and structure the following wireframes were created:
 
-    - Desktop:
+    - Desktop and mobile:
 
         - Welcome
 
@@ -154,43 +154,6 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
         - Log Out
 
             ![LogOut](./readme/wireframe-logout-desktop.png)
-
-
-    - Mobile:
-
-       
-        - Welcome
-
-            ![Welcome](./readme/wireframe-welcome-mobile.png)
-
-        - LogIn
-
-            ![LogIn](./readme/wireframe-login-mobile.png)
-
-        - Register
-
-            ![Register](./readme/wireframe-register-mobile.png)
-
-        - Contact Admin
-
-            ![ContactAdmin](./readme/wireframe-contact-admin-mobile.png)
-            
-        - All Offers
-
-            ![AllOffers](./readme/wireframe-all-offers-mobile.png)
-
-        - Profile
-
-            ![Profile](./readme/wireframe-profile-mobile.png)
-
-        - New Offers
-
-            ![AddOffer](./readme/wireframe-add-offer-mobile.png)
-
-        - Log Out
-
-            ![LogOut](./readme/wireframe-logout-mobile.png)
-
 
        
 
@@ -255,41 +218,32 @@ Colours, typography, design elements, images, effects to be discussed.
 #### Common Page features
 
 - Logo
-    - The logo is clickable and provides an easy way to navigate back to the home page
+    - The logo is clickable and provides an easy way to navigate back to the welcome page
     - It is consistently located on each page allowing the user to easily find it
   
 - Navigation Bar
     - Consistently located on each page allowing an intuitive user experience
-    - Provides links to the ___________________________________________________________ pages
+    - Provides links to the Welcome, LogIn, Register, ContactAdmin, AllOffers, Profile and NewOffers pages and the LogOut tab
 
 - Footer
-    - Pinned at the bottom of the page
-    - Contains ____________________________________________
+    - Pinned at the bottom of the welcome and contact admin page, provides clickable links to facebook, instagram and twitter
+
     
 #### Page specific features
 
- - Welcome page
-
-
-        - LogIn page
-
-
-        - Register page
-
-
-        - Contact Admin page
-
-            
-        - All Offers page
-
-
-        - Profile page
-
-
-        - New Offers page
-
-
-        - Log Out tab in navigation bar
+-   Welcome page - available to the public and giving basic information about the website and providing a photograph of the neighbourhood
+-   Login page - for completion of the username and password and clicking on the login link to enable registered members to log into the website 
+-   Register page - for new/unregistered members to enable registration by completing their username, providing their firstname, surname and postal code, creating their own password 
+    and confirming that they agree to abide by the rules as set out on the bottom of the registration page by clicking the checkbox provided (a requirement before registration can take place). When hovering over the Password space, a tip appears to indicate that a password length must be between 5 and 100 and alphanumerical.
+-   Contact Admin page - provides both registered members and unregistered users access to obtain contact details of the site administrator, such as a contact number, email 
+    address, office address and available hours and providing another photograph of the neighbourhood
+-   Profile page - reflects the registered user's username, firstname, surname and postal code. The registered user can change their password on this page, should they
+    want / need to at any stage after their initial registration. When hovering over the Password space, a tip appears to indicate that a password length must be between 5 and 100 and alphanumerical
+-   All Offers page -  this page has the option for the registered and logged in user to see all the available offers, to filter the offers by category, to filter the page to 
+    only see the offers of the registered user, to clear the filters and to edit or delete their own offers.  Registered members do not have the option to delete or edit offers of other members. No edit or delete buttons appear on the offers of other members. When hovering over the ApplyFilter button, a tip appears to assist the user when making use of this page
+-   New Offers page - once a registered member is logged in, they can add their own offer which will appear on the All Offers page.  To add an offer, a member must first elect a 
+    category from the drop down list, thereafter provide an offer name, then a description of the offer, provide a collection address, collection date and there is an option to reflect the collection start time and expiry time. A member can also indicate whether the offering is a hot or a cold product, which may be relevant for any persons considering collection of said offering
+-   Logout in the nav bar - by clicking on the LogOut tab in the navigation bar a registered user is easily logged out of their profile and the registered section of the site
 
 
 
@@ -421,26 +375,26 @@ Colours, typography, design elements, images, effects to be discussed.
 ### GitHub Pages
 
 - The site is deployed to GitHub pages. The steps to deploy were as follows:
-    - Log into GitHub and locate the fLoC GitHub repository, navigate to the Settings tab and select the Pages 
+    - Log into GitHub and locate the My-dutch-life GitHub repository, navigate to the Settings tab and select the Pages 
     - From the source section drop-down menu, select the Master Branch
-- The live link can be found here - [https://morpheus-23.github.io/sharing-is-caring/](https://morpheus-23.github.io/sharing-is-caring/)
+- The live link can be found here - [https://flask-dutch-life-project.herokuapp.com/welcome)
 
 ### Making a Clone
 
-- Log into GitHub and locate the Sharing-is-Caring GitHub repository
-- Click on the Sharing-is-Caring repository
+- Log into GitHub and locate the My-dutch-life GitHub repository
+- Click on the My-dutch-life repository
 - Click on the Code button
 - Choose the HTTPS option, then click on the clipboard right of the URL
 - Then choose your IDE or editor of choice
 - Open a respository or create a new repository 
 - Open the terminal and type "git clone" and paste the URL copied above 
-    git clone https://github.com/Morpheus-23/sharing-is-caring.git
+    git clone https://github.com/Morpheus-23/my-dutch-life.git
 - press enter and the clone will be created
 
 ### Forking the repository for own use
 
-- Log into GitHub and locate the Sharing-is-Caring GitHub repository
-- Click on the Sharing-is-Caring repository
+- Log into GitHub and locate the My-dutch-life GitHub repository
+- Click on the My-dutch-life repository
 - Click on the Fork button
 - 
 
@@ -485,23 +439,10 @@ Heroku - deploy the live site
 
 https://randomkeygen.com/
 
-Credits
-
-Code
-- StackOverflow ?
-- W3 schools
-- Materialize
-- Code Institute
-
-
-
-
-
-
 
 ## Unimplemented assessment criteria
 
-* Styling can be 
+* Styling can be more compact and less inline.
 
 
 ## Content
