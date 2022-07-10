@@ -141,19 +141,17 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
             
         - All Offers
 
-            ![AllOffers](./readme/wireframe-all-offers-desktop.png)
+            ![AllOffers](./readme/wf-alloffers.jpg)
 
         - Profile
 
-            ![Profile](./readme/wireframe-profile-desktop.png)
+            ![Profile](./readme/wf-profile.jpg)
 
         - New Offers
 
-            ![AddOffer](./readme/wireframe-add-offer-desktop.png)
+            ![AddOffer](./readme/wf-addoffer.jpg)
 
-        - Log Out
 
-            ![LogOut](./readme/wireframe-logout-desktop.png)
 
        
 
