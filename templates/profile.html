@@ -1,14 +1,62 @@
 {% extends "base.html" %}
 {% block content %}
 
+<h4 class="center-align white-text text-shadow background-color: light-blue darken-3">My profile <i
+        class="fa-solid fa-unlock-keyhole"></i> </h4>
 <div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="text-transform: uppercase">
-            <h4 class="center-align light-green-text text-darken-4">
-                {{ username }}'s profile
-            </h4>
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('profile', username=username) }}">
+        <div class="card-panel ">
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-user prefix light-blue-text text-lighten-3"></i>
+                    <input disabled id="username" name="username" type="text" value="{{ member.username }}" class="validate" minlength="4" maxlength="25">
+                    <label class="light-blue-text text-lighten-3" for="username">Username</label>
+                </div>
+            </div>
+            <!-- firstname -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-id-card prefix light-blue-text text-lighten-3"></i>
+                    <input disabled id="firstname" name="firstname" type="text" value="{{ member.firstname }}" class="validate" minlength="2" maxlength="100">
+                    <label class="light-blue-text text-lighten-3" for="firstname">Firstname</label>
+                </div>
+            </div>
+            <!-- surname -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-id-card prefix light-blue-text text-lighten-3"></i>
+                    <input disabled id="surname" name="surname" type="text" value="{{ member.surname }}" class="validate" minlength="2" maxlength="100">
+                    <label class="light-blue-text text-lighten-3" for="surname">Surname</label>
+                </div>
+            </div>
+            <!-- postal_code -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-envelopes-bulk prefix light-blue-text text-lighten-3"></i>
+                    <input disabled id="postal_code" name="postal_code" type="text" value="{{ member.postal_code }}" class="validate" minlength="6" maxlength="6">
+                    <label class="light-blue-text text-lighten-3" for="postal_code">Postal Code</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fa-solid fa-user-secret prefix light-blue-text text-lighten-3"></i>
+                    <input id="password" name="password" type="password" class="validate" minlength="5" maxlength="100"
+                        pattern="^[a-zA-Z0-9]{5,100}$" required>
+                    <label class="light-blue-text text-lighten-3" for="password">Password</label>
+                </div>
+            </div>
+
+            <!-- update -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large cyan darken-4 text-shadow">
+                    Update <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
+
 
 {% endblock %}

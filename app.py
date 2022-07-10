@@ -83,14 +83,27 @@ def login():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # get the logged in user's username from database
-    username = mongo.db.members.find_one(
-        {"username": session["username"]})["username"]
+    # get the logged in user's profile from database
+    member = mongo.db.members.find_one({"username": username})
 
-    if session["username"]:
-        return render_template("profile.html", username=username)
+    if request.method == "POST":
+        # check if member exists in database
 
-    return redirect(url_for("login"))
+        updated_member = {
+            "username": request.form.get("username").lower(),
+            "firstname": request.form.get("firstname"),
+            "surname": request.form.get("surname"),
+            "postal_code": request.form.get("postal_code").upper(),
+            "ruleschecked": request.form.get("ruleschecked"),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+
+        mongo.db.members.replace_one(member, updated_member, True)
+
+        return redirect(url_for("get_offers"))
+
+    return render_template("profile.html", member=member)
+
 
 
 @app.route("/logout")
@@ -174,7 +187,7 @@ def get_offers():
     elif len(selected_categories) > 0 and my_offers == "checked":
         filter_criteria = { "$and": [{ "category_name": { "$in": selected_categories} }, { "offered_by": { "$eq": session["username"]} }] }
     
-    offers = list(mongo.db.offers.find( filter_criteria ))
+    offers = list(mongo.db.offers.find(filter_criteria))
 
     return render_template("offers.html", offers=offers, categories=categories, filters=filters)
 
