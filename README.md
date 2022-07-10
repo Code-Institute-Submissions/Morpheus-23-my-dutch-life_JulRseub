@@ -160,13 +160,17 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 ### Surface
 
 - The clickable logo and navigation bar is consistently located on each page, allowing an intuitive user experience
-- The navigation bar and collapsible ___________________________________________
+- The images shown on the site, reflects the Katwijk community, which images in itself will draw the community members in as they would be curious about the happenings in their  
+  direct environment
+- The layout has been kept very clean and simple as the site is aimed at absolutely all persons within the Katwijk community, young and old, from all backgrounds
+- The colours taken from the Materialize Color Palette was also kept very simple and more shades of the same colors were used in stead of a greater variety of colours, also to keep
+    the site looking calm and relaxing.  The colours were also chosen reflect the blue skye, green of the trees and the colours of the incredible blue and green building.
 
-- 
+        "Cool colors include green, blue, and purple, are often more subdued than warm colors. They are the colors of night, of water, of nature, and are usually calming, relaxing, and somewhat reserved.
 
+        Blue is the only primary color within the cool spectrum, which means the other colors are created by combining blue with a warm color (yellow for green and red for purple).
 
-Surface Plane
-Colours, typography, design elements, images, effects to be discussed.
+        Because of this, green takes on some of the attributes of yellow, and purple takes on some of the attributes of red. Use cool colors in your designs to give a sense of calm or professionalism." Taken from (https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/)
 
 
 - Screenshots reflecting the following pages:
@@ -209,7 +213,6 @@ Colours, typography, design elements, images, effects to be discussed.
             ![LogOut2](./readme/ss-logout-mobile.png)
 
    
-
 
 ## Features
 
@@ -443,6 +446,9 @@ https://randomkeygen.com/
 ## Unimplemented assessment criteria
 
 * Styling can be more compact and less inline.
+* Better defensive programming can be applied.
+* Features for the site administrator can be developed so that new categories can be created by the administrator on the website and not just from MongoDB.
+* Better wireframes could be done by making use of Balsamic, to replace the hand drawn wireframes.
 
 
 ## Content
@@ -455,13 +461,13 @@ https://randomkeygen.com/
 
 - The sitemap was prepared using [GlooMaps](https://gloomaps.com/)
 
-- The databa schema was prepared using [Lucid.app](https://lucid.app/)
+- The database schema was prepared using [Lucid.app](https://lucid.app/)
 
-- Fonts were used from [GoogleFonts](https://fonts.google.com/)
+- Fonts were utilised from [GoogleFonts](https://fonts.google.com/)
 
 - Font and background colours and some functionalities were taken from [Materialize](https://materializecss.com/)
 
-- Screenshots were taken from [AmIResponsive](https://ui.dev/amiresponsive)
+- Responsiveness was tested and screenshots were taken from [AmIResponsive](https://ui.dev/amiresponsive)
 
 - Some design ideas were taken from the Code Institute Backend Development Mini Project.
 
