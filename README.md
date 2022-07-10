@@ -199,110 +199,44 @@ Colours, typography, design elements, images, effects to be discussed.
 
 - Screenshots reflecting the following pages:
 
-    - For desktop:
+    - For desktop, laptop, tablet and mobile:
 
-      - Home page
+        - Welcome
 
-            ![HomePage](./readme/ss-home-desktop.png)
-
-        - Register Page
-
-            ![RegisterPage](./readme/ss-register-desktop.png)
+            ![Welcome](./readme/ss-welcome.png)
 
         - LogIn
 
-            ![LogIn](./readme/ss-login-desktop.png)
+            ![LogIn](./readme/ss-login.png)
+
+        - Register
+
+            ![Register](./readme/ss-register-part1.png)
+            ![Register2](./readme/ss-register-part2.png)
+
+        - Contact Admin
+
+            ![ContactAdmin](./readme/ss-contact-admin.png)
+            
+        - All Offers
+
+            ![AllOffers](./readme/ss-all-offers.png)
 
         - Profile
 
-            ![Profile](./readme/ss-profile-desktop.png)
+            ![Profile](./readme/ss-profile.png)
 
         - New Offers
 
-            ![AddOffer](./readme/ss-add-offer-desktop.png)
+            ![AddOffer](./readme/ss-add-offer.png)
 
         - Log Out
 
             ![LogOut](./readme/ss-logout-desktop.png)
-
-        - Manage Categories
-
-            ![ManageCategories](./readme/ss-manage-categories-desktop.png)
-
-        - Contact Admin
-
-            ![ContactPage](./readme/ss-contact-admin-desktop.png)
-
-       - Desktop:
-
-        - Welcome
-
-            ![Welcome](./readme/ss-welcome-desktop.png)
-
-        - LogIn
-
-            ![LogIn](./readme/ss-login-desktop.png)
-
-        - Register
-
-            ![Register](./readme/ss-register-desktop.png)
-
-        - Contact Admin
-
-            ![ContactAdmin](./readme/ss-contact-admin-desktop.png)
             
-        - All Offers
+            ![LogOut2](./readme/ss-logout-mobile.png)
 
-            ![AllOffers](./readme/ss-all-offers-desktop.png)
-
-        - Profile
-
-            ![Profile](./readme/wireframe-ss-desktop.png)
-
-        - New Offers
-
-            ![AddOffer](./readme/ss-add-offer-desktop.png)
-
-        - Log Out
-
-            ![LogOut](./readme/ss-logout-desktop.png)
-
-
-    - Mobile:
-
-       
-        - Welcome
-
-            ![Welcome](./readme/ss-welcome-mobile.png)
-
-        - LogIn
-
-            ![LogIn](./readme/ss-login-mobile.png)
-
-        - Register
-
-            ![Register](./readme/ss-register-mobile.png)
-
-        - Contact Admin
-
-            ![ContactAdmin](./readme/ss-contact-admin-mobile.png)
-            
-        - All Offers
-
-            ![AllOffers](./readme/ss-all-offers-mobile.png)
-
-        - Profile
-
-            ![Profile](./readme/ss-profile-mobile.png)
-
-        - New Offers
-
-            ![AddOffer](./readme/ss-add-offer-mobile.png)
-
-        - Log Out
-
-            ![LogOut](./readme/ss-logout-mobile.png)
-
+   
 
 
 ## Features
