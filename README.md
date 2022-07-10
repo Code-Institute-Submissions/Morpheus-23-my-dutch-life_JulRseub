@@ -61,8 +61,8 @@ The website is not area specific and can very easily be adapted / applied for ot
 
 ### Strategy
 
-The main aim and focus of Sharing-is-Caring is to enhance the experience of living in the community:
-    - by bringing like minded people together,
+The main aim and focus of Care-2-Share is to enhance the experience of living in the community of Katwijk:
+    - by bringing like minded people together
     - by making it apparent that people do care and that a sense of community is alive and well in the 21st century
     - by providing a platform where people can easily and clearly indicate what they would like to share with and within their community
     - by enabling the community to enjoy the offerings from within their community
@@ -75,29 +75,41 @@ Initial release: Functional specifications
 - the design and layout should be kept simplistic throughout and very easy to use (taking time to give away free meals, products, invite strangers to picnics and barbeques should not become a cumbersome exercise)
 - all pages should clearly indicate all the clickable links in the navigation bar, on all types of devices
 - the home page should provide basic information and be clear about the purpose of the website
-- the registration page is where a member can register to enable them to have a profile on the website, which will grante them access to more features such as posting their own offerings, amending and / or deleting same. Said page will require a username, firstname, surname, postal code and password to be inserted.
+- the registration page is where a member can register to enable them to have a profile on the website, which will grant them access to the offers page and enable them to post their own offerings, amending and / or deleting same. Said page will require a username, firstname, surname, postal code and password to be inserted.
 - disclaimer, rules and guidelines at the bottom of the registration page are just a few basic rules / guidelines which new members are required to read when signing up, and reading same needs to be confirmed by clicking the check box which will enable their registration to be complete
 - in an attemt to keep the website a friendly environment for all (prior to making the site available for the public, consulation with a law practitioner will be required to ensure that the disclaimer meets the needs of the site owner and is in accordance with the governing laws, further consideration of good conduct rules may be considered, prior to providing a feature where the members may be enabled to upload images, privacy laws need to be considered and further guidelines in regards thereto may need to be reflected on the site.)
-- the login page will enable a registered member to access their profile by inserting their username and password and thus gaining access to their profile.
+- the login page will enable a registered member to access their profile by inserting their username and password and thus gaining access to their profile and all available offers
 - the logout menu item will enable a member to log out of their profile
 - offers, the main purpose of the website, where all the offers and invitations happen consists of various categories such as meals, produce, pets related, garden, household, bicycles, invitations, other.
--  manage categories is a feature available to the site owner only, enabling said owner to manage/amend the categories, create new categories, delete categories
-- contact admin page is an onsite email enabling the public / community to contact the site ownwer, should they require assistance, have queries, suggestions, complaints, concerns, compliments,
+- contact admin page is where the site owner provides contact details to the public and no registration is required to visit said page.  Registered members and/or the public will be allowed to contact the site ownwer, should they require assistance, have queries, suggestions, complaints, concerns, compliments, etc.
 
 Possible future release:
 - depending on the outcome of legal consultation and depending whether required / requested by the members of the site, the site owner will consider enabling members to upload photographs of their offerings, however said photographs will have to be authorised by the site owner before appearing on the site to ensure suitability such as privacy laws etc where not breached.
-- FAQ: frequently asked questions page may be considered and developed, based upon community interaction via the onsite email form.
+- FAQ: frequently asked questions page may be considered and developed, based upon community interaction via the email form.
 
 
 ### Structure
 
 The purpose of the website is to bring members of the community together by enabling them to easily share with one another, whether it be a meal, a barbeque event or childrens' toys.  The website is structured for absolute ease of use by new and existing members.  The site has a logical and easy flow, ensuring a positive user experience.  The structure was developed with that in mind.
 - The initial website consists of:
+    -   Welcome page - available to the public and giving basic information about the website
+    -   Login page - to enable registered members to log into the website which will allow access to their own profile page, the all offers page and new offers page
+    -   Register page - for new/unregistered members to be able to register and thus get access to all the content of the website. For registration they need to create a username
+        provide their firstname, surname and postal code, create their own password and confirm that they agree to abide by the rules as set out on the bottom of the
+        registration page by clicking the checkbox provided (a requirement before registration can take place)
+    -   Contact Admin page provides both registered members and unregistered users access to obtain contact details of the site administrator, such as a contact number, email 
+        address, office address and available hours
+    
+     in the navigation bar reflected on the home page, enabling new members to easily register and become contributing members on the website
+    -   All Offers page ffers from where they can access the new offers tab in the navigation bar to enable them to manage their offers by adding new, amending existing, deleting expired offers
+
+  
+ 
     - Home page - reflecting all offers as posted by all members
-    - Register tab in the navigation bar reflected on the home page, enabling new members to easily register and become contributing members on the website
-    - Login page - to enable members to access their own profile pages, from where they can access the new offers tab in the navigation bar to enable them to manage their offers by adding new, amending existing, deleting expired offers
-    - Logout in nav bar enables a registered member to easily log out of their profile
-    - Contact Admin tab in the navigation bar enabling both registered members and unregistered users to contact the site owner by sending an email from the site.
+
+    - Logout in nav bar enables a registered member to easily log out of their profile by clicking on the Logout tab in the nav bar
+ 
+
 
 The data schema below was prepared by using [Lucid.app](https://lucid.app/)
 

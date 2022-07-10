@@ -10,17 +10,13 @@
 body {
     font-family: Lato:300;
 }
-   
-
-
-
 
 .brand-logo {
     margin-left: 3%;
     font-size: 60%;
 }
 
-/* https://www.digitalocean.com/community/tutorials/css-prevent-line-break */
+/* ---- https://www.digitalocean.com/community/tutorials/css-prevent-line-break */
 .nowrap {
     white-space: nowrap;
     overflow: hidden;
@@ -35,7 +31,6 @@ body {
     width: 70%;
     padding: 10px;
   }
-
 
 .text-shadow {
     text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
@@ -63,7 +58,6 @@ body {
 
 #buttonright.btn-small {
     font-family: Lato:300;
-    
 }
 
 .collapsible-header .col strong {
@@ -102,9 +96,7 @@ body {
 }
 
 
-
-
-/* ---------------------- Footer */
+/* ----- Footer */
 
 footer {
     text-align: center;
