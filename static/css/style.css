@@ -1,3 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body {
+    font-family: Lato:300;
+}
+   
+
+
+
+
 .brand-logo {
     margin-left: 3%;
     font-size: 60%;
@@ -34,15 +51,18 @@
 
 .collapsible-body {
     background-color: light-blue lighten-3;
+    font-family: Lato:300;
 }
 
 .btn-small {
     margin: 10px;
     margin-right: 10%;
     font-size-adjust: inherit;
+    font-family: Lato:300;
 }
 
 #buttonright.btn-small {
+    font-family: Lato:300;
     
 }
 

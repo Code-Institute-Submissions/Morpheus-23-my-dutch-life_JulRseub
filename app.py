@@ -21,8 +21,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/welcome")
 def welcome():
-# the landing page providing info about site
+    # the landing page providing info about site
     return render_template("welcome.html")
+
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -105,13 +106,13 @@ def profile(username):
     return render_template("profile.html", member=member)
 
 
-
 @app.route("/logout")
 def logout():
     # remove user from session cookies
     flash("You have been logged out.....goodbye")
     session.pop("username")
     return redirect(url_for("login"))
+
 
 @app.route("/add_offer", methods=["GET", "POST"])
 def add_offer():
@@ -160,6 +161,7 @@ def delete_offer(offer_id):
 
     return redirect(url_for("get_offers"))
 
+
 @app.route("/get_offers")
 def get_offers():
     # https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
@@ -194,8 +196,9 @@ def get_offers():
 
 @app.route("/contact_admin")
 def contact_admin():
-     # the last page, being contact admin
+# the last page, being contact admin
     return render_template("contact_admin.html")
+
 
 def populate_offer(request_form):
     is_hot_product = "on" if request_form.get(
