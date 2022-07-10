@@ -91,16 +91,16 @@ def profile(username):
         # check if member exists in database
 
         updated_member = {
-            "username": request.form.get("username").lower(),
-            "firstname": request.form.get("firstname"),
-            "surname": request.form.get("surname"),
-            "postal_code": request.form.get("postal_code").upper(),
-            "ruleschecked": request.form.get("ruleschecked"),
-            "password": generate_password_hash(request.form.get("password"))
+            "username": username,
+            "firstname": member["firstname"],
+            "surname": member["surname"],
+            "postal_code": member["postal_code"],
+            "ruleschecked": member["ruleschecked"],
+            "password": generate_password_hash(request.form.get("password")),
+            "active": "on"
         }
 
         mongo.db.members.replace_one(member, updated_member, True)
-
         return redirect(url_for("get_offers"))
 
     return render_template("profile.html", member=member)

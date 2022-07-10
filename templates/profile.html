@@ -4,7 +4,7 @@
 <h4 class="center-align white-text text-shadow background-color: light-blue darken-3">My profile <i
         class="fa-solid fa-unlock-keyhole"></i> </h4>
 <div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('profile', username=username) }}">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('profile', username=member.username) }}">
         <div class="card-panel ">
             <!-- username -->
             <div class="row">
