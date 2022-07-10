@@ -42,6 +42,10 @@
     font-size: larger;
 }
 
+#buttonright.btn-small {
+    
+}
+
 .collapsible-header .col strong {
     margin: 7px;
     line-height: 42px;

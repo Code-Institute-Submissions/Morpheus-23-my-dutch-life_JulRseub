@@ -114,17 +114,25 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
     - Desktop:
 
-        - Home page
+        - Welcome
 
-            ![HomePage](./readme/wireframe-home-desktop.png)
-
-        - Register Page
-
-            ![RegisterPage](./readme/wireframe-register-desktop.png)
+            ![Welcome](./readme/wireframe-welcome-desktop.png)
 
         - LogIn
 
             ![LogIn](./readme/wireframe-login-desktop.png)
+
+        - Register
+
+            ![Register](./readme/wireframe-register-desktop.png)
+
+        - Contact Admin
+
+            ![ContactAdmin](./readme/wireframe-contact-admin-desktop.png)
+            
+        - All Offers
+
+            ![AllOffers](./readme/wireframe-all-offers-desktop.png)
 
         - Profile
 
@@ -138,27 +146,29 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
             ![LogOut](./readme/wireframe-logout-desktop.png)
 
-        - Manage Categories
-
-            ![ManageCategories](./readme/wireframe-manage-categories-desktop.png)
-
-        - Contact Admin
-
-            ![ContactPage](./readme/wireframe-contact-admin-desktop.png)
 
     - Mobile:
 
-        - Home page
+       
+        - Welcome
 
-            ![HomePage](./readme/wireframe-home-mobile.png)
-
-        - Register Page
-
-            ![RegisterPage](./readme/wireframe-register-mobile.png)
+            ![Welcome](./readme/wireframe-welcome-mobile.png)
 
         - LogIn
 
             ![LogIn](./readme/wireframe-login-mobile.png)
+
+        - Register
+
+            ![Register](./readme/wireframe-register-mobile.png)
+
+        - Contact Admin
+
+            ![ContactAdmin](./readme/wireframe-contact-admin-mobile.png)
+            
+        - All Offers
+
+            ![AllOffers](./readme/wireframe-all-offers-mobile.png)
 
         - Profile
 
@@ -172,13 +182,6 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 
             ![LogOut](./readme/wireframe-logout-mobile.png)
 
-        - Manage Categories
-
-            ![ManageCategories](./readme/wireframe-manage-categories-mobile.png)
-
-        - Contact Admin
-
-            ![ContactPage](./readme/wireframe-contact-admin-mobile.png)
 
        
 
