@@ -176,7 +176,6 @@ def get_offers():
 
     # populate dropdown
     categories = list(mongo.db.categories.find())
-    # TODO: figure out how to mark the categories as selected after filtering
 
     filter_criteria = ""
 

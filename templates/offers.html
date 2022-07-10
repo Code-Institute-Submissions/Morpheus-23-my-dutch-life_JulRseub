@@ -4,7 +4,8 @@
 <h4 class="center-align white-text text-shadow background-color: light-blue darken-3">All Offers</h4>
 
 <form action="{{ url_for('get_offers') }}" method="get">
-    <!-- https://stackoverflow.com/questions/30207047/how-to-get-multi-select-dropdown-in-materialize-css -->
+
+    <!-- taken from https://stackoverflow.com/questions/30207047/how-to-get-multi-select-dropdown-in-materialize-css -->
     <div class="col s9">
         <select id="selected_categories" name="selected_categories" multiple>
             <option value="" disabled selected>Filter by categories</option>
@@ -71,4 +72,5 @@
         return true;
     }
 </script>
+
 {% endblock %}

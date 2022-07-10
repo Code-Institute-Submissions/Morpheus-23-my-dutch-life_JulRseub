@@ -233,7 +233,7 @@ Colours, typography, design elements, images, effects to be discussed.
         - Log Out
 
             ![LogOut](./readme/ss-logout-desktop.png)
-            
+
             ![LogOut2](./readme/ss-logout-mobile.png)
 
    
@@ -492,6 +492,7 @@ Gitpod - developing the site
 Github - version control and hosting the repository
 Heroku - deploy the live site
 
+https://randomkeygen.com/
 
 Credits
 
@@ -509,24 +510,44 @@ Code
 
 ## Unimplemented assessment criteria
 
-* Completion / finalisation of website functionalities, css to be amended, wireframes to be uploaded, landing page and contact admin page to be completed, testing to be finalised and documented, deployment to be done, readme.md to be finalised
+* Styling can be 
 
 
 ## Content
 
 - All icons were taken from [Font Awesome](https://fontawesome.com/)
+
 - All images were taken from [Pexels](https://pexels.com/)
+    -   Welcome page (Photo by Chait Goli: https://www.pexels.com/photo/photo-of-boats-parked-on-river-2031706/)
+    -   Contact admin page (Photo by Teodor Savin: https://www.pexels.com/photo/green-and-blue-painted-house-600622/)
+
 - The sitemap was prepared using [GlooMaps](https://gloomaps.com/)
+
 - The databa schema was prepared using [Lucid.app](https://lucid.app/)
-- Font and background colours were identified by [___](https://www./)
-- Some design ideas were taken from >>>>
-- A lot of technical implementation information were taken from [_____](_____)
-- Some information was taken from [StackOverflow](https://stackoverflow.com/)
 
-## Directory structure
+- Fonts were used from [GoogleFonts](https://fonts.google.com/)
 
-The site content is structured as follows:
+- Font and background colours and some functionalities were taken from [Materialize](https://materializecss.com/)
 
-| Directory | Description |
-|---|---|
-| / | .......................
+- Screenshots were taken from [AmIResponsive](https://ui.dev/amiresponsive)
+
+- Some design ideas were taken from the Code Institute Backend Development Mini Project.
+
+- Some technical implementation information was taken from [StackOverflow](https://stackoverflow.com/)
+    -   https://stackoverflow.com/questions/30207047/how-to-get-multi-select-dropdown-in-materialize-css
+    -   https://stackoverflow.com/questions/69950552/mongodb-update-i-cant-update-my-documents-in-mongodb-with-flask-api
+    -   https://stackoverflow.com/questions/11774265/how-do-you-access-the-query-string-in-flask-routes
+    -   https://stackoverflow.com/questions/23577172/mongodb-pymongo-querying-multiple-criteria-unexpected-results
+
+- Some technical information was taken from [Freecodecamp](https://freecodecamp.org/)
+    -   https://www.freecodecamp.org/news/python-list-length-how-to-get-the-size-of-a-list-in-python/
+
+- Some technical information was taken from [Digitalocean](https://digitalocean.com/)
+    -   https://www.digitalocean.com/community/tutorials/css-prevent-line-break
+
+- Some technical information was taken from [Youtube](https://www.youtube.com/c/CodersPage)
+    -   https://www.youtube.com/watch?v=dQ2niRl2Lek
+
+- I made use of[W3Schools](https://www.w3schools.com/) for help with html and css.
+
+
