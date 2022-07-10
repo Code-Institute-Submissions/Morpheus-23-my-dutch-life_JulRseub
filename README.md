@@ -97,18 +97,15 @@ The purpose of the website is to bring members of the community together by enab
     -   Register page - for new/unregistered members to be able to register and thus get access to all the content of the website. For registration they need to create a username
         provide their firstname, surname and postal code, create their own password and confirm that they agree to abide by the rules as set out on the bottom of the
         registration page by clicking the checkbox provided (a requirement before registration can take place)
-    -   Contact Admin page provides both registered members and unregistered users access to obtain contact details of the site administrator, such as a contact number, email 
+    -   Contact Admin page - provides both registered members and unregistered users access to obtain contact details of the site administrator, such as a contact number, email 
         address, office address and available hours
-    
-     in the navigation bar reflected on the home page, enabling new members to easily register and become contributing members on the website
-    -   All Offers page ffers from where they can access the new offers tab in the navigation bar to enable them to manage their offers by adding new, amending existing, deleting expired offers
-
-  
- 
-    - Home page - reflecting all offers as posted by all members
-
-    - Logout in nav bar enables a registered member to easily log out of their profile by clicking on the Logout tab in the nav bar
- 
+    -   Profile page - reflects the registered user's username, firstname, surname, postal code and password. The registered user can change their password on this page, should they
+        want / need to at any stage after their initial registration.
+    -   All Offers page -  this page has the option for the registered and logged in user to see all the available offers, to filter the offers by category, to filter the page to 
+        only see the offers of the registered user, to clear the filters and to edit or delete their own offers.  Registered members do not have the option to delete or edit offers of other members. No edit or delete buttons appear on the offers of other members.
+    -   New Offers page - once a registered member is logged in, they can add their own offer which will appear on the All Offers page.  To add an offer, a member must first elect a 
+        category from the drop down list, thereafter provide an offer name, then a description of the offer, provide a collection address, collection date and there is an option to reflect the collection start time and expiry time. A member can also indicate whether the offering is a hot or a cold product, which may be relevant for any persons considering collection of said offering.
+    -   Logout in the nav bar - by clicking on the Log Out tab in the navigation bar a registered user is easily logged out of their profile and the registered section of the site.
 
 
 The data schema below was prepared by using [Lucid.app](https://lucid.app/)
@@ -271,35 +268,28 @@ Colours, typography, design elements, images, effects to be discussed.
     
 #### Page specific features
 
-- Home page
+ - Welcome page
 
 
-
-- Register Page
-
+        - LogIn page
 
 
-- LogIn
-
- 
-
-- Profile
+        - Register page
 
 
+        - Contact Admin page
 
-- New Offers
-
-
-
-- Log Out
+            
+        - All Offers page
 
 
-
-- Manage Categories
-
+        - Profile page
 
 
-- Contact Admin
+        - New Offers page
+
+
+        - Log Out tab in navigation bar
 
 
 
@@ -332,7 +322,7 @@ Colours, typography, design elements, images, effects to be discussed.
 
 ### Testing User Stories from the UX Section
 
-- First Time User
+### User stories
 
 - As a First Time User, I want:
     - the home page to clearly indicate its intention and target group.
@@ -346,7 +336,7 @@ Colours, typography, design elements, images, effects to be discussed.
     - to be able to register as a member of the community and as a result be able to access more functions on the site such as posting/editing/deleting my own offerings
     - to be able to post my own offerings with ease of use
     - to change / amend any of my offerings with ease of use
-    - to delete my expired offerings with ease of use
+    - to delete my offerings with ease of use
     - to be able to access the site from different devices, thus the site must be responsive
     - to be able to communicate with the site owner, should I have suggestions, queries, concerns or maybe even a compliment
 
@@ -366,49 +356,38 @@ Colours, typography, design elements, images, effects to be discussed.
     - promote / further the sharing and caring attitude of the community by bringing them together and enabling them to "find" one another in a easy to navigate and safe environment
     - as a minimum requirement, require a postal code when new members register to try and keep this initiative within the intended community, to also keep it practical from a distance perspective when offering/collecting/getting together etc.
     - keep the site relevant and simple to use, thus ensuring the site stays fresh and relevant, I need to be able to delete any expired offers(if not removed by the members), delete complete inactive members(which may have relocated....?)
-    - easily create new categories, if a need arises (as may be requested by a community member (from the onsite email facility)
+    - easily create new categories, if a need arises (as may be requested by a community member (if request/s received via email)
     -  be able to store as much data as needed to be able to host the offerings from the community 
     -  ensure that the site is accessible from all device sizes
     -  ensure that members are not able to access the profile of other members and only be able to access, add, delete, amended offerings created from their own profiles
-    -  delete / block any members that disregard the rules of the site;
     -  host a friendly community site easy to use by young and old
-    -   be able to receive communication / feedback / requests from the community via the online email option provided, to (as far as possible and applicable) keep the site reflective of the community and its members
-
+    -  be able to receive communication / feedback / requests from the community via the contact details provided (as far as possible and applicable) keep the site reflective of the community and its members
 
 
 ### Manual Testing of Functionality
 
 
-- Home page
-
-
-
-- Register Page
-
-
-
-- LogIn
-
+ - Welcome page
  
-
-- Profile
-
+ - LogIn page
 
 
-- New Offers
+- Register page
 
 
+- Contact Admin page
 
-- Log Out
-
-
-
-- Manage Categories
+            
+- All Offers page
 
 
+- Profile page
 
-- Contact Admin
 
+- New Offers page
+
+
+- Log Out tab in navigation bar
 
 
 
