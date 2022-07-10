@@ -379,18 +379,35 @@ The testing section is in a seperate file: [Testing](testing.md)
 
 - Log into GitHub and locate the My-dutch-life GitHub repository
 - Click on the My-dutch-life repository
-- Click on the Fork button
-- 
+- Click on the Fork button 
+
+#### Create Mongodb database 
+
+- Create a new database 
+- Create the collection for:
+    - categories
+    - offers
+    - members
 
 ### Heroku
 
+#### Create a Heroku application 
 
+- Create a Heroku account
+- Select 'Create New App' from the dashboard and choose an App name
+- Select the region based on your location
+- Click 'Create App'
 
+#### Deployment 
 
+- Go to deploy tab and select github
+- Enter repo name in the Connect to github search box and select the relevant repo.
+- Go to setting and config vars and click reveal Config Vars
+- Add environment variables from the env.py file
+- Find Manual Deploy, choose master branch
+- Click deploy master branch
+- Click to Open App
 
-Deployment
-
-steps
 
 ## Technologies Used
 
