@@ -152,9 +152,6 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
             ![AddOffer](./readme/wf-addoffer.jpg)
 
 
-
-       
-
 ### Surface
 
 - The clickable logo and navigation bar is consistently located on each page, allowing an intuitive user experience
@@ -247,111 +244,9 @@ The sitemap was prepared using [Gloomaps](https://www.gloomaps.com/nMkFjnEiHn)
 -   Logout in the nav bar - by clicking on the LogOut tab in the navigation bar a registered user is easily logged out of their profile and the registered section of the site
 
 
-
-
 ## Testing
 
 The testing section is in a seperate file: [Testing](testing.md)
-
-### UX
-
-* Each page has ______________
-* The selected navigation menu item ________________________________
-
-### Testing User Stories from the UX Section
-
-### User stories
-
-- As a First Time User, I want:
-    - the home page to clearly indicate its intention and target group.
-    - to find the home page familiar to my experience in my area and feel welcome/enticed to join this online community platform
-    - each page to clearly indicate the navigation possibilities of the site.
-    - to find the website easy to navigate and move between the pages of the site.
-    - to find the rules and guidelines of the website clear and not too formal
-    - to be able to browse through the list/s of offerings from my community
-    - to know exactly when offerings are available
-    - to know whether any expiry date relates to a specific offering
-    - to be able to register as a member of the community and as a result be able to access more functions on the site such as posting/editing/deleting my own offerings
-    - to be able to post my own offerings with ease of use
-    - to change / amend any of my offerings with ease of use
-    - to delete my offerings with ease of use
-    - to be able to access the site from different devices, thus the site must be responsive
-    - to be able to communicate with the site owner, should I have suggestions, queries, concerns or maybe even a compliment
-
-- As a Returning User(registered member), I want to:
-    - know that registered members are from my community/area/vicinity, thus the area code checking when registering as a user is a good feature of the site
-    - find it easy to log into my account
-    - find it easy to log out of my account
-    - find it easy to add new offerings
-    - find it easy to amend my offerings
-    - find it easy to delete any / or all of my offerings
-    - find it easy to search for offerings on the site
-    - be able to communicate with the site owner / administrator should I need to
-
-- As the Site Owner I want to:
-    - provide a site that is clear in its intention
-    - provide the community with a user-friendly site where they can share their offerings with one another and as a result try and share where applicable fresh meals / produce before an expiry date arise, where applicable
-    - promote / further the sharing and caring attitude of the community by bringing them together and enabling them to "find" one another in a easy to navigate and safe environment
-    - as a minimum requirement, require a postal code when new members register to try and keep this initiative within the intended community, to also keep it practical from a distance perspective when offering/collecting/getting together etc.
-    - keep the site relevant and simple to use, thus ensuring the site stays fresh and relevant, I need to be able to delete any expired offers(if not removed by the members), delete complete inactive members(which may have relocated....?)
-    - easily create new categories, if a need arises (as may be requested by a community member (if request/s received via email)
-    -  be able to store as much data as needed to be able to host the offerings from the community 
-    -  ensure that the site is accessible from all device sizes
-    -  ensure that members are not able to access the profile of other members and only be able to access, add, delete, amended offerings created from their own profiles
-    -  host a friendly community site easy to use by young and old
-    -  be able to receive communication / feedback / requests from the community via the contact details provided (as far as possible and applicable) keep the site reflective of the community and its members
-
-
-### Manual Testing of Functionality
-
-
- - Welcome page
- 
- - LogIn page
-
-
-- Register page
-
-
-- Contact Admin page
-
-            
-- All Offers page
-
-
-- Profile page
-
-
-- New Offers page
-
-
-- Log Out tab in navigation bar
-
-
-
-### Validator Testing
-
-- HTML
-    - No html errors were returned for the ...... page when passing through the official [W3C validator](https://validator.w3.org/nu/...........morpheus-23.github.io...............html)
-
-    - Various errors where returned for the ..............page when passing through the official [W3C validator](https://validator.w3.org/nu...............
-
-
-
-- CSS
-    - No CSS errors were found when passing through the [(Jigsaw) validator]
-    - [home page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmorpheus-23.github.io............
-
-
-- Google Chrome Lighthouse
-    - ![Test-1](./readme/lighthouse-1.png)
-    - ![Test-2](./readme/lighthouse-2.png)
-
-### Fixed
-
-### Unfixed Bugs
-
-* See various .....................................
 
 
 ## Deployment
